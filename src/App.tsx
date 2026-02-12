@@ -40,7 +40,7 @@ import Onboarding from './pages/Onboarding';
 import Language from './pages/Language';
 import Role from './pages/Role';
 import Preparing from './pages/Preparing';
-import SignUp from './pages/Signup';
+
 import Login from './pages/Login';
 import Notify from './pages/Notify';
 import FreeTrial from './pages/FreeTrial';
@@ -85,6 +85,7 @@ import EventCheckout from './pages/Workshop/EventCheckout';
 import EventRegistrationSuccess from './pages/Workshop/EventRegistrationSuccess';
 import PaymentCheckout from './pages/Workshop/PaymentCheckout';
 import AllEventTicket from './pages/Workshop/AllEventTicket';
+import SignUp from './pages/SignUp';
 
 setupIonicReact();
 
