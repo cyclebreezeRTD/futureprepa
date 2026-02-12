@@ -1,0 +1,76 @@
+.quiz-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+/* Header */
+.quiz-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-main {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.title-sub {
+  font-size: 12px;
+  color: #8e8e93;
+}
+
+/* Segment */
+.quiz-segment {
+  margin: 16px 0;
+}
+
+.quiz-segment ion-segment-button {
+  --background-checked: #ff6b6b;
+  --color-checked: #ffffff;
+  --indicator-color: transparent;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+/* Quiz Card */
+.quiz-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.quiz-text p {
+  font-size: 12px;
+  color: #8e8e93;
+  max-width: 240px;
+}
+
+.quiz-card ion-icon {
+  font-size: 20px;
+  color: #c7c7cc;
+}
+
+/* Button */
+.start-btn {
+  margin-top: 24px;
+  --background: #2f80ed;
+  --border-radius: 14px;
+}
+
+/* Ask AI */
+.ask-ai {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #111;
+}

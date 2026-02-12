@@ -1,0 +1,88 @@
+/* Gradient header */
+
+.categories-header {
+  background: linear-gradient(180deg, #4fe3ff 0%, #46bfff 100%);
+}
+
+.categories-toolbar {
+  --background: transparent;
+}
+
+.categories-title {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Subtitle */
+
+.categories-sub {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  margin-top: -4px;
+  margin-bottom: 10px;
+}
+
+/* Pills */
+
+.categories-chips {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 14px;
+}
+
+.pill {
+  height: 26px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.pill.all {
+  background: #4caf50;
+  color: #fff;
+}
+
+.pill.unread {
+  background: #ff5c8a;
+  color: #fff;
+}
+
+.pill.messages {
+  background: #ffd400;
+  color: #000;
+}
+
+/* Empty state */
+
+.dm-empty {
+  margin-top: 90px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.dm-empty h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dm-empty p {
+  font-size: 11px;
+  color: #b5b5b5;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* Button */
+
+.dm-btn {
+  --background: #1677ff;
+  --border-radius: 20px;
+  height: 34px;
+  font-size: 12px;
+  text-transform: none;
+  min-width: 120px;
+}

@@ -1,0 +1,88 @@
+/* Message header */
+
+.msg-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.msg-sub {
+  font-size: 12px;
+  color: #9a9a9a;
+  padding-left: 16px;
+  margin-top: -4px;
+}
+
+/* Chips */
+
+.msg-chips {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+}
+
+.msg-pill {
+  height: 26px;
+  border-radius: 18px;
+  font-size: 12px;
+}
+
+.msg-pill.notify {
+  background: #49b675;
+  color: white;
+}
+
+.msg-pill.chat {
+  background: #e25aa7;
+  color: white;
+}
+
+.msg-pill.unread {
+  background: #ffd400;
+  color: black;
+}
+
+/* Message card */
+
+.message-card {
+  margin: 10px 16px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.message-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.msg-icon {
+  width: 28px;
+  height: 28px;
+  background: #ffd400;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.msg-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.msg-time {
+  font-size: 11px;
+  color: #2f80ff;
+  margin-top: 2px;
+}
+
+.msg-view {
+  font-size: 11px;
+  color: #9a9a9a;
+}

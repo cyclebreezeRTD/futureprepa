@@ -1,0 +1,70 @@
+.custom-tab-bar {
+  --background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  height: 70px;
+  padding: 8px 0;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Remove any default backgrounds */
+ion-tab-bar.custom-tab-bar {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+}
+
+.tab-button {
+  --color: rgba(255, 255, 255, 0.6);
+  --color-selected: #ffffff;
+  --background: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --ripple-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.tab-label {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.center-tab {
+  position: relative;
+  /* Remove label to keep it clean like in the design */
+}
+
+.center-tab ion-label {
+  display: none;
+}
+
+.center-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ffa06b 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+  margin: 0 auto;
+}
+
+.center-icon {
+  font-size: 32px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.tab-button.tab-selected {
+  --color: #ffffff;
+}
+
+.tab-button.tab-selected .tab-icon {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}

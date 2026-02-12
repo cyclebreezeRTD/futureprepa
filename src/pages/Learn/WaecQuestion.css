@@ -1,0 +1,143 @@
+.question-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+/* Header */
+.question-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-main {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.title-sub {
+  font-size: 12px;
+  color: #8e8e93;
+}
+
+/* Segment */
+.question-segment {
+  margin: 16px 0;
+}
+
+.question-segment ion-segment-button {
+  --background-checked: #ff6b6b;
+  --color-checked: #fff;
+  --indicator-color: transparent;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+/* Subject Row */
+.subject-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.subject-row h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.subject-row span {
+  font-size: 12px;
+  color: #8e8e93;
+}
+
+/* Meta */
+.question-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.time {
+  color: #ff6b6b;
+}
+
+/* Question */
+.question-body {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.question-text {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 12px;
+  color: #8e8e93;
+  margin: 12px 0 8px;
+}
+
+/* Options */
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+ion-radio {
+  --color-checked: #ff6b6b;
+}
+
+/* Explanation */
+.explanation {
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 8px 0 12px;
+}
+
+.explanation.error {
+  background: #ffecec;
+  color: #ff3b30;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f2f2f7;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot.active {
+  background: #2f80ed;
+  color: #fff;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.next-btn {
+  --background: #2f80ed;
+  --border-radius: 12px;
+}

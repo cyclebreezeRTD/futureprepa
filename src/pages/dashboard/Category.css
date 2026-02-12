@@ -1,0 +1,109 @@
+/* ===== PAGE & CONTENT BACKGROUND (CRITICAL) ===== */
+ion-page {
+  background: #f6f6f9;
+}
+
+ion-content {
+  --background: #f6f6f9;
+}
+
+/* Header */
+.category-header {
+  background: #f6f6f9;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #777;
+  margin: 0 16px 12px;
+}
+
+/* Segment */
+.segment {
+  margin: 0 16px 12px;
+}
+
+.segment ion-segment-button {
+  --indicator-color: #f4c430;
+  --color-checked: #000;
+}
+
+/* Chips */
+.chips {
+  display: flex;
+  gap: 10px;
+  padding: 0 16px 10px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.chip.blue {
+  background: #4c8dff;
+}
+
+.chip.red {
+  background: #ff4d4f;
+}
+
+.chip.purple {
+  background: #9b51e0;
+}
+
+/* Content padding */
+.category-content {
+  --padding-start: 12px;
+  --padding-end: 12px;
+}
+
+/* Cards */
+.resume-card {
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.icon-box {
+  background: #f4c430;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: 18px;
+  color: #000;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-text h3 {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.card-text p {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 6px;
+}
+
+.time {
+  font-size: 11px;
+  color: #4c8dff;
+}
+
+/* Resume Button */
+.resume-btn {
+  font-size: 11px;
+  align-self: center;
+  white-space: nowrap;
+}

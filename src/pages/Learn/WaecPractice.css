@@ -1,0 +1,89 @@
+.practice-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+/* Header */
+.practice-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-main {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.title-sub {
+  font-size: 12px;
+  color: #8e8e93;
+}
+
+/* Segment */
+.practice-segment {
+  margin: 16px 0;
+}
+
+.practice-segment ion-segment-button {
+  --background-checked: #ff6b6b;
+  --color-checked: #fff;
+  --indicator-color: transparent;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+/* Topic Card */
+.topic-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.topic-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.topic-card p {
+  font-size: 12px;
+  color: #8e8e93;
+  margin-bottom: 16px;
+}
+
+/* Topic Items */
+.topic-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.topic-item ion-icon {
+  font-size: 18px;
+}
+
+/* Gradients */
+.math {
+  background: linear-gradient(135deg, #b24592, #f15f79);
+}
+
+.english {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+.biology {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+}
+
+/* Button */
+.start-btn {
+  margin-top: 24px;
+  --background: #2f80ed;
+  --border-radius: 14px;
+}

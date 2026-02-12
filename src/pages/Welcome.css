@@ -1,0 +1,90 @@
+.welcome-content {
+  --background: linear-gradient(180deg, #229CE9 0%, #37224A 100%);
+}
+
+.welcome-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.decorative-elements {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.decorative-elements.top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.decorative-elements.bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.arrow {
+  position: absolute;
+  opacity: 0.6; /* Increased from 0.3 to make arrows brighter */
+  filter: brightness(1.2); /* Makes them even brighter */
+}
+
+.arrow-top {
+  top: 40px;
+  right: 20px;
+  width: 100px; /* Made bigger */
+  height: auto;
+  transform: rotate(-15deg);
+}
+
+.arrow-bottom-left {
+  bottom: 60px;
+  left: 20px;
+  width: 80px; /* Made bigger */
+  height: auto;
+  transform: rotate(25deg);
+}
+
+.arrow-bottom-right {
+  bottom: 40px;
+  right: 30px;
+  width: 90px; /* Made bigger */
+  height: auto;
+  transform: rotate(-20deg);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.logo {
+  max-width: 280px;
+  width: 80%;
+  height: auto;
+}
+
+/* Add subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo-section {
+  animation: fadeIn 0.8s ease-out;
+}

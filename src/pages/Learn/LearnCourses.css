@@ -1,0 +1,262 @@
+/* Header Styles */
+.learn-courses-header {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+}
+
+.learn-courses-toolbar {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+  padding: 10px 16px;
+  --min-height: 56px;
+}
+
+.learn-courses-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.header-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 22px;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Content Styles */
+.learn-courses-content {
+  --background: #f8f9fa;
+  background: #f8f9fa;
+}
+
+/* Title Section */
+.learn-courses-title-section {
+  padding: 16px 16px 12px 16px;
+  background: #ffffff;
+}
+
+.learn-courses-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 4px 0;
+}
+
+.learn-courses-subtitle {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+}
+
+/* Category Pills */
+.learn-courses-pills {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #ffffff;
+  overflow-x: auto;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 16px;
+}
+
+.course-pill {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.course-pill.purple {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.course-pill.orange {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
+}
+
+.course-pill.pink {
+  background: linear-gradient(135deg, #ff6b9d 0%, #f5576c 100%);
+}
+
+.course-pill.red {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+}
+
+/* Courses Section */
+.courses-section {
+  padding: 0 16px 20px 16px;
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.info-icon {
+  font-size: 18px;
+  color: #999999;
+}
+
+/* Course Cards */
+.course-card {
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card.orange-gradient {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff7b4d 100%);
+}
+
+.course-card.pink-gradient {
+  background: linear-gradient(135deg, #ff6b9d 0%, #f5576c 100%);
+}
+
+.course-card.yellow-gradient {
+  background: linear-gradient(135deg, #ffd93d 0%, #ffb03b 100%);
+}
+
+.course-card.red-gradient {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+}
+
+.course-card.purple-gradient {
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+}
+
+.course-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.course-card-description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.course-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.course-level {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.course-lessons {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.course-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.course-card-icon.pink-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.course-card-icon.yellow-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.course-card-icon.red-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.course-card-icon.purple-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.icon-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Remove scrollbar for pills */
+.learn-courses-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.learn-courses-pills {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 380px) {
+  .course-card {
+    padding: 16px;
+  }
+  
+  .course-card-title {
+    font-size: 14px;
+  }
+  
+  .course-card-description {
+    font-size: 11px;
+  }
+}

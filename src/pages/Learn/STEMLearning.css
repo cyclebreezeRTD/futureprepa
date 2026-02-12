@@ -1,0 +1,235 @@
+/* Header Styles */
+.stem-learning-header {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+}
+
+.stem-learning-toolbar {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+  padding: 10px 16px;
+  --min-height: 56px;
+}
+
+.stem-learning-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.header-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 22px;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Content Styles */
+.stem-learning-content {
+  --background: #f8f9fa;
+  background: #f8f9fa;
+}
+
+/* Title Section */
+.stem-learning-title-section {
+  padding: 16px 16px 12px 16px;
+  background: #ffffff;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.breadcrumb-icon {
+  font-size: 16px;
+  color: #666666;
+}
+
+.breadcrumb-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.stem-learning-subtitle {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Category Pills */
+.stem-learning-pills {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #ffffff;
+  overflow-x: auto;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.stem-pill {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.stem-pill.purple {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stem-pill.orange {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
+}
+
+.stem-pill.pink {
+  background: linear-gradient(135deg, #ff6b9d 0%, #f5576c 100%);
+}
+
+.stem-pill.red {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+}
+
+/* STEM Section */
+.stem-section {
+  padding: 0 16px;
+}
+
+.stem-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 16px 0;
+}
+
+/* Subject Stack */
+.subject-stack {
+  position: relative;
+  height: 400px;
+  margin-bottom: 24px;
+}
+
+.subject-stack-card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subject-stack-card:hover {
+  transform: translateY(-4px);
+}
+
+.subject-stack-card.mathematics {
+  background: linear-gradient(135deg, #667eea 0%, #a855f7 100%);
+  top: 0;
+  z-index: 4;
+}
+
+.subject-stack-card.physics {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  top: 90px;
+  z-index: 3;
+}
+
+.subject-stack-card.chemistry {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  top: 180px;
+  z-index: 2;
+}
+
+.subject-stack-card.biology {
+  background: linear-gradient(135deg, #ffd93d 0%, #f9a825 100%);
+  top: 270px;
+  z-index: 1;
+}
+
+.stack-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+/* Equation Solver Card */
+.equation-solver-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.solver-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.solver-description {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.solver-button {
+  --background: #ffffff;
+  --color: #667eea;
+  --border-radius: 12px;
+  --padding-start: 24px;
+  --padding-end: 24px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  margin: 0;
+}
+
+/* Remove scrollbar for pills */
+.stem-learning-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.stem-learning-pills {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 380px) {
+  .stack-card-title {
+    font-size: 24px;
+  }
+  
+  .solver-title {
+    font-size: 18px;
+  }
+}

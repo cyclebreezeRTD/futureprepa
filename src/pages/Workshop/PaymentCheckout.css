@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.payment-checkout-app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2d1f4a 0%, #231838 50%, #1a1129 100%);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  padding-bottom: 80px;
+}
+
+/* Status Bar */
+.payment-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  height: 44px;
+}
+
+.payment-time {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: white;
+}
+
+.payment-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Header */
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.payment-menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.payment-menu-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.payment-header-title-section {
+  flex: 1;
+  text-align: center;
+  margin: 0 -40px 0 0;
+}
+
+.payment-page-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.payment-page-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 2px 0 0 0;
+}
+
+.payment-header-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.payment-action-icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Payment Card */
+.payment-card {
+  background: white;
+  border-radius: 24px 24px 0 0;
+  padding: 24px 20px;
+  min-height: calc(100vh - 260px);
+}
+
+/* Event Info */
+.event-info-section {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.event-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.4px;
+}
+
+.event-date {
+  font-size: 13px;
+  color: #ff4757;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.2px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.contact-value {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Payment Methods */
+.payment-methods-section {
+  margin-bottom: 20px;
+}
+
+.payment-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.payment-option.selected {
+  background: #f0f7ff;
+  border-color: #4facfe;
+}
+
+.payment-option-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-right: 12px;
+}
+
+.payment-option-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Mastercard Logo */
+.mastercard-logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.mastercard-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.mastercard-red {
+  background: #eb001b;
+  position: relative;
+  z-index: 2;
+}
+
+.mastercard-orange {
+  background: #f79e1b;
+  margin-left: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Visa Logo */
+.visa-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.visa-text {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1434cb;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.mastercard-small {
+  display: flex;
+  align-items: center;
+}
+
+.mc-small-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.mc-small-red {
+  background: #eb001b;
+  position: relative;
+  z-index: 2;
+}
+
+.mc-small-orange {
+  background: #f79e1b;
+  margin-left: -6px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Amazon Logo */
+.amazon-logo {
+  display: flex;
+  align-items: center;
+}
+
+.amazon-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff9900;
+  font-family: Arial, sans-serif;
+}
+
+/* Radio Button */
+.radio-button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d0d0d0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.radio-button.checked {
+  border-color: #4facfe;
+}
+
+.radio-dot {
+  width: 10px;
+  height: 10px;
+  background: #4facfe;
+  border-radius: 50%;
+}
+
+/* Payment Terms */
+.payment-terms {
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.payment-terms-text {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+/* Payment Footer */
+.payment-footer {
+  position: fixed;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 16px 20px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.total-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.total-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.continue-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.continue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 172, 254, 0.5);
+}
+
+.continue-btn:active {
+  transform: translateY(0);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #3d2f5a 0%, #2a1f42 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0 12px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 12px;
+  flex: 1;
+  transition: all 0.2s;
+}
+
+.nav-item-center {
+  position: relative;
+  top: -16px;
+}
+
+.center-button {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #c471ed 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.5);
+}
+
+.center-icon {
+  font-size: 32px;
+  color: white;
+}
+
+.nav-icon {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.nav-item-active .nav-icon {
+  color: #ff6b9d;
+}
+
+.nav-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.nav-item-active .nav-label {
+  color: #ff6b9d;
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .payment-card {
+    padding: 20px 16px;
+  }
+
+  .event-name {
+    font-size: 22px;
+  }
+
+  .payment-footer {
+    padding: 14px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .payment-checkout-app {
+    max-width: 428px;
+    margin: 0 auto;
+  }
+
+  .payment-footer {
+    max-width: 428px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .bottom-nav {
+    max-width: 428px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

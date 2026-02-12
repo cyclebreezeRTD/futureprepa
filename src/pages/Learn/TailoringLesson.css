@@ -1,0 +1,168 @@
+/* Header Styles */
+.tailoring-lesson-header {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+}
+
+.tailoring-lesson-toolbar {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+  padding: 10px 16px;
+  --min-height: 56px;
+}
+
+.tailoring-lesson-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-icon {
+  font-size: 24px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.header-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 22px;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Content Styles */
+.tailoring-lesson-content {
+  --background: #ffffff;
+  background: #ffffff;
+}
+
+/* Title Section */
+.lesson-title-section {
+  padding: 16px 16px 12px 16px;
+  background: #ffffff;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.breadcrumb-icon {
+  font-size: 16px;
+  color: #666666;
+}
+
+.breadcrumb-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.lesson-subtitle {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Hero Image */
+.lesson-hero-container {
+  padding: 0 16px 20px 16px;
+}
+
+.lesson-hero-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffd6e7 0%, #ffc2d9 100%);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Learn Section */
+.learn-section {
+  padding: 0 16px 30px 16px;
+}
+
+.learn-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 16px 0;
+}
+
+.learn-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.learn-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-icon {
+  font-size: 20px;
+  color: #ffd93d;
+  flex-shrink: 0;
+}
+
+.learn-text {
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Navigation Buttons */
+.lesson-navigation-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px 20px 16px;
+}
+
+.lesson-nav-btn {
+  flex: 1;
+  height: 48px;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 15px;
+  margin: 0;
+}
+
+.prev-btn {
+  --border-color: #e0e0e0;
+  --color: #333333;
+  --border-width: 2px;
+  --border-radius: 24px;
+  --background: #ffffff;
+}
+
+.next-btn {
+  --background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --border-radius: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 380px) {
+  .lesson-hero-image {
+    height: 180px;
+  }
+  
+  .learn-text {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.event-ticket-app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2d1f4a 0%, #231838 50%, #1a1129 100%);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  padding-bottom: 80px;
+}
+
+/* Status Bar */
+.ticket-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  height: 44px;
+}
+
+.ticket-time {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: white;
+}
+
+.ticket-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Header */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.ticket-menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.ticket-menu-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.ticket-header-title-section {
+  flex: 1;
+  text-align: center;
+  margin: 0 -40px 0 0;
+}
+
+.ticket-page-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.ticket-page-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 2px 0 0 0;
+}
+
+.ticket-header-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.ticket-action-icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Ticket Card */
+.ticket-card {
+  background: white;
+  border-radius: 24px;
+  margin: 0 16px 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Concert Banner */
+.concert-banner {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+.banner-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.coldplay-logo {
+  flex: 1;
+}
+
+.coldplay-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.album-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 4px 0 0 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.qr-code {
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ticket Info */
+.ticket-info {
+  padding: 20px;
+}
+
+.concert-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.3px;
+}
+
+/* Ticket Details Grid */
+.ticket-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 13px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Barcode Section */
+.barcode-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed #d0d0d0;
+  text-align: center;
+}
+
+.barcode-number {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* Bottom Navigation */
+.ticket-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #3d2f5a 0%, #2a1f42 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0 12px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.ticket-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 12px;
+  flex: 1;
+  transition: all 0.2s;
+}
+
+.ticket-nav-item-center {
+  position: relative;
+  top: -16px;
+}
+
+.ticket-center-button {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #c471ed 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.5);
+}
+
+.ticket-center-icon {
+  font-size: 32px;
+  color: white;
+}
+
+.ticket-nav-icon {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.ticket-nav-item-active .ticket-nav-icon {
+  color: #ff6b9d;
+}
+
+.ticket-nav-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.ticket-nav-item-active .ticket-nav-label {
+  color: #ff6b9d;
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .ticket-card {
+    margin: 0 12px 20px;
+  }
+
+  .ticket-info {
+    padding: 16px;
+  }
+
+  .concert-title {
+    font-size: 15px;
+  }
+
+  .ticket-details-grid {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .event-ticket-app {
+    max-width: 428px;
+    margin: 0 auto;
+  }
+
+  .ticket-bottom-nav {
+    max-width: 428px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

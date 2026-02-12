@@ -1,0 +1,116 @@
+.learn-header {
+  padding-top: env(safe-area-inset-top);
+}
+
+.learn-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-small {
+  font-size: 12px;
+  color: #8e8e93;
+}
+
+.title-big {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+  font-size: 22px;
+  padding-right: 12px;
+}
+
+.learn-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+/* Segment */
+.learn-segment {
+  margin: 16px 0;
+  background: #f2f2f7;
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.learn-segment ion-segment-button {
+  --indicator-color: transparent;
+  --color-checked: #fff;
+  --background-checked: #ff6b00;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+/* Section title */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0 12px;
+}
+
+/* Cards */
+.course-card {
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.course-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.course-card p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Progress */
+.progress {
+  background: rgba(255, 255, 255, 0.3);
+  height: 6px;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: #fff;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.progress-text {
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+/* Gradients */
+.orange {
+  background: linear-gradient(135deg, #ff8c42, #ff6b00);
+}
+
+.pink {
+  background: linear-gradient(135deg, #ff5f9e, #ff8fb1);
+}
+
+.green {
+  background: linear-gradient(135deg, #00c48c, #7ddfc3);
+}
+
+.purple {
+  background: linear-gradient(135deg, #6a5cff, #b18cff);
+}
