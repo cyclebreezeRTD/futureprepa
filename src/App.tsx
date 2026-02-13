@@ -86,6 +86,11 @@ import EventRegistrationSuccess from './pages/Workshop/EventRegistrationSuccess'
 import PaymentCheckout from './pages/Workshop/PaymentCheckout';
 import AllEventTicket from './pages/Workshop/AllEventTicket';
 import SignUp from './pages/SignUp';
+import CommunityPage from './pages/Community/CommunityPage';
+import ICANFeedPage from './pages/Community/ICANFeedPage';
+import WAECFeedPage from './pages/Community/WAECFeedPage';
+import AskQuestionPage from './pages/Community/AskQuestionPage';
+import MentorPage from './pages/Community/MentorPage';
 
 setupIonicReact();
 
@@ -246,6 +251,21 @@ const App: React.FC = () => (
               </Route>
                  <Route exact path="/tabs/allevent-ticket">
                 <AllEventTicket />
+              </Route>
+                 <Route exact path="/tabs/community">
+                <CommunityPage />
+              </Route>
+                 <Route exact path="/tabs/ican">
+                <ICANFeedPage />
+              </Route>
+                 <Route exact path="/tabs/waec-feed">
+                <WAECFeedPage />
+              </Route>
+                 <Route exact path="/tabs/ask-question">
+                <AskQuestionPage />
+              </Route>
+                 <Route exact path="/tabs/mentor">
+                <MentorPage />
               </Route>
               <Route exact path="/tabs">
                 <Redirect to="/tabs/tab1" />

@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.community-app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2e1f4e 0%, #1a1235 40%, #1c1a3a 100%);
+  color: #ffffff;
+  padding-bottom: 90px;
+}
+
+/* ── Status Bar ── */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 18px;
+  height: 44px;
+}
+
+.time {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Top Header ── */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 18px 12px;
+}
+
+.menu-btn,
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* ── Page Title Row ── */
+.page-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px 20px;
+}
+
+.page-title-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.add-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.5);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.add-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ── Main Content ── */
+.main-content {
+  padding: 0 18px;
+}
+
+.section-heading {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 14px;
+  letter-spacing: -0.2px;
+}
+
+.planned-heading {
+  margin-top: 30px;
+}
+
+/* ── Segment Cards ── */
+.segments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.segment-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s;
+}
+
+.segment-card:last-child {
+  border-bottom: none;
+}
+
+.segment-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.segment-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dropbox-icon {
+  background: rgba(0, 97, 255, 0.1);
+  border-color: rgba(0, 97, 255, 0.2);
+}
+
+.segment-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.segment-top-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.segment-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.2px;
+}
+
+.member-count {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.segment-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.join-btn {
+  flex-shrink: 0;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  transition: transform 0.2s;
+  align-self: center;
+  position: relative;
+}
+
+.join-btn::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M7 1v12M1 7h12' stroke='white' strokeWidth='2' strokeLinecap='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.join-btn.orange {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  box-shadow: 0 3px 10px rgba(249, 115, 22, 0.4);
+}
+
+.join-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ── Planned Features ── */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s;
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.purple-icon {
+  background: rgba(155, 89, 182, 0.18);
+  border: 1px solid rgba(155, 89, 182, 0.25);
+}
+
+.yellow-icon {
+  background: rgba(243, 156, 18, 0.18);
+  border: 1px solid rgba(243, 156, 18, 0.25);
+}
+
+.green-icon {
+  background: rgba(39, 174, 96, 0.18);
+  border: 1px solid rgba(39, 174, 96, 0.25);
+}
+
+.blue-icon {
+  background: rgba(52, 152, 219, 0.18);
+  border: 1px solid rgba(52, 152, 219, 0.25);
+}
+
+.feature-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.feature-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 3px;
+  letter-spacing: -0.2px;
+}
+
+.feature-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.segments-list,
+.features-list {
+  animation: fadeInUp 0.45s ease-out backwards;
+}
+
+.segments-list  { animation-delay: 0.1s; }
+.features-list  { animation-delay: 0.2s; }
