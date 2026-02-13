@@ -55,7 +55,7 @@ const Role: React.FC = () => {
   const handleContinue = () => {
     // Save selected role
     localStorage.setItem('selectedRole', selectedRole);
-    history.push('/tabs/tab1'); // Navigate to main app
+    history.push('/preparing'); // Navigate to main app
   };
 
   return (

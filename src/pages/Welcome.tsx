@@ -1,10 +1,24 @@
+import React, { useEffect } from 'react';
 import { IonContent, IonPage } from '@ionic/react';
+import { useHistory } from 'react-router-dom';
 import './Welcome.css';
-import arrow from "../images/arrow1.png"
-import arrow2 from "../images/arrow2.png"
-import arrow3 from "../images/arrow3.png"
-import logo from "../images/logo.png"
+import arrow from "../images/arrow1.png";
+import arrow2 from "../images/arrow2.png";
+import arrow3 from "../images/arrow3.png";
+import logo from "../images/logo.png";
+
 const Welcome: React.FC = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      history.push('/onboarding');
+    }, 3000);
+
+    // Cleanup timer if component unmounts before 3 seconds
+    return () => clearTimeout(timer);
+  }, [history]);
+
   return (
     <IonPage>
       <IonContent className="welcome-content">

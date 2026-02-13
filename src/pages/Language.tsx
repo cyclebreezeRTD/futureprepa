@@ -12,7 +12,7 @@ const Language: React.FC = () => {
   const handleContinue = () => {
     // Save selected language (you can use localStorage or context)
     localStorage.setItem('selectedLanguage', selectedLanguage);
-    history.push('/tabs/tab1'); // Navigate to main app
+    history.push('/role'); // Navigate to main app
   };
 
   return (

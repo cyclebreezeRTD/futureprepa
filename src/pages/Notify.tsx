@@ -45,11 +45,11 @@ const Notify: React.FC = () => {
         console.log('Notification permission:', permission);
       });
     }
-    history.push('/tabs/tab1');
+    history.push('/free-trial');
   };
 
   const handleNotNow = () => {
-    history.push('/tabs/tab1');
+    history.push('/free-trial');
   };
 
   return (

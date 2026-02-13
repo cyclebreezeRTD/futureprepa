@@ -53,11 +53,11 @@ const FreeTrial: React.FC = () => {
 
   const handleStartTrial = () => {
     console.log('Selected plan:', selectedPlan);
-    history.push('/tabs/tab1');
+    history.push('/final-welcome');
   };
 
   const handleNoCharge = () => {
-    history.push('/tabs/tab1');
+    history.push('/final-welcome');
   };
 
   return (

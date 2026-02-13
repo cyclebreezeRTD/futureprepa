@@ -29,7 +29,7 @@ const Login: React.FC = () => {
   const handleSignUp = () => {
     // Save user data and navigate
     console.log('Sign up data:', formData);
-    history.push('/tabs/tab1');
+    history.push('/notify');
   };
 
   return (

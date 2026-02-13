@@ -7,7 +7,7 @@ const Onboarding: React.FC = () => {
   const history = useHistory();
 
   const handleContinue = () => {
-    history.push('/tabs/tab1'); // Navigate to main app
+    history.push('/language'); // Navigate to main app
   };
 
   return (

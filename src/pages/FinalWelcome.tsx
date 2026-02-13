@@ -8,7 +8,7 @@ const FinalWelcome: React.FC = () => {
   const history = useHistory();
 
   const handleGoToDashboard = () => {
-    history.push('/tabs/tab1');
+    history.push('/tabs/home');
   };
 
   return (

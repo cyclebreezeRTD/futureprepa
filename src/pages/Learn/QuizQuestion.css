@@ -178,7 +178,7 @@
   padding: 16px;
   background: #ffffff;
   border-radius: 12px;
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0; */
 }
 
 .option-header {
