@@ -95,6 +95,8 @@ import ProfilePage from './pages/Community/ProfilePage';
 import MessagePage from './pages/Community/MessagePage';
 import DashboardStats from './pages/SchDashboard/DashboardStats';
 import ManageStudents from './pages/SchDashboard/ManageStudents';
+import StudentDetail from './pages/SchDashboard/StudentDetail';
+import ManageParent from './pages/SchDashboard/ManageParent';
 
 setupIonicReact();
 
@@ -282,6 +284,12 @@ const App: React.FC = () => (
               </Route>
                  <Route exact path="/tabs/manage-student">
                 <ManageStudents />
+              </Route>
+                 <Route exact path="/tabs/student-details">
+                <StudentDetail />
+              </Route>
+                 <Route exact path="/tabs/manage-parent">
+                <ManageParent />
               </Route>
               <Route exact path="/tabs">
                 <Redirect to="/tabs/tab1" />
