@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.add-teacher-app {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Status Bar */
+.teacher-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  height: 44px;
+  background: white;
+}
+
+.teacher-time {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.teacher-status-icons {
+  display: flex;
+  gap: 6px;
+}
+
+/* Header */
+.teacher-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 20px 16px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.teacher-header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.teacher-back-icon,
+.teacher-menu-icon {
+  font-size: 24px;
+  color: #000;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.teacher-title-section {
+  flex: 1;
+}
+
+.teacher-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 2px 0;
+}
+
+.teacher-subtitle {
+  font-size: 11px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.teacher-header-right {
+  display: flex;
+  gap: 16px;
+  margin-top: 2px;
+}
+
+.teacher-header-icon {
+  font-size: 22px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Form Card */
+.teacher-form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 20px;
+  margin: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.form-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px 0;
+}
+
+.form-card-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  transition: all 0.2s;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ec4899;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+/* Select Dropdown */
+.select-wrapper {
+  position: relative;
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  padding-right: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #ec4899;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+  pointer-events: none;
+}
+
+.select-arrow-custom {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Form Buttons */
+.form-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cancel-btn {
+  background: white;
+  color: #666;
+  border: 1px solid #e0e0e0;
+}
+
+.cancel-btn:hover {
+  background: #f5f5f5;
+}
+
+.cancel-btn:active {
+  transform: scale(0.98);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.4);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .teacher-form-card {
+    padding: 20px 16px;
+  }
+
+  .form-buttons {
+    gap: 10px;
+  }
+}

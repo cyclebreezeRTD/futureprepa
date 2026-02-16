@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.invite-parent-app {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Status Bar */
+.invite-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  height: 44px;
+  background: white;
+}
+
+.invite-time {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.invite-status-icons {
+  display: flex;
+  gap: 6px;
+}
+
+/* Header */
+.invite-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: white;
+}
+
+.invite-menu-icon {
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+.invite-header-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.invite-header-icon {
+  font-size: 22px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Title Section */
+.invite-title-section {
+  padding: 16px 20px 20px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.invite-page-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 2px 0;
+}
+
+.invite-page-subtitle {
+  font-size: 11px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Form Card */
+.invite-form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  margin: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pink accent bar at top */
+.form-accent-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #f472b6 0%, #ec4899 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.invite-form-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 20px 20px 4px;
+}
+
+.invite-form-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 0 20px 20px;
+  line-height: 1.4;
+}
+
+/* Form Group */
+.invite-form-group {
+  margin-bottom: 18px;
+  padding: 0 20px;
+}
+
+.invite-form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.invite-form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  transition: all 0.2s;
+}
+
+.invite-form-input::placeholder {
+  color: #999;
+}
+
+.invite-form-input:focus {
+  outline: none;
+  border-color: #ec4899;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+/* Select Dropdown */
+.invite-select-wrapper {
+  position: relative;
+}
+
+.invite-form-select {
+  width: 100%;
+  padding: 12px 14px;
+  padding-right: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.invite-form-select:focus {
+  outline: none;
+  border-color: #ec4899;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.invite-select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Form Buttons */
+.invite-form-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 20px 24px;
+  margin-top: 24px;
+}
+
+.invite-cancel-btn,
+.invite-submit-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.invite-cancel-btn {
+  background: white;
+  color: #666;
+  border: 1px solid #e0e0e0;
+}
+
+.invite-cancel-btn:hover {
+  background: #f5f5f5;
+}
+
+.invite-cancel-btn:active {
+  transform: scale(0.98);
+}
+
+.invite-submit-btn {
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.invite-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.4);
+}
+
+.invite-submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .invite-form-card {
+    margin: 0 16px;
+  }
+
+  .invite-form-group {
+    padding: 0 16px;
+  }
+
+  .invite-form-title {
+    margin: 20px 16px 4px;
+  }
+
+  .invite-form-subtitle {
+    margin: 0 16px 20px;
+  }
+
+  .invite-form-buttons {
+    padding: 0 16px 20px;
+    gap: 10px;
+  }
+}
