@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.manage-students-app {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Status Bar */
+.manage-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  height: 44px;
+  background: white;
+}
+
+.manage-time {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.manage-status-icons {
+  display: flex;
+  gap: 6px;
+}
+
+/* Header */
+.manage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 20px 16px;
+  background: white;
+  margin-bottom: 16px;
+}
+
+.manage-header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.manage-back-icon {
+  font-size: 24px;
+  color: #000;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.manage-title-section {
+  flex: 1;
+}
+
+.manage-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 2px 0;
+}
+
+.manage-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.manage-header-right {
+  display: flex;
+  gap: 16px;
+  margin-top: 2px;
+}
+
+.manage-header-icon {
+  font-size: 22px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Class Pills */
+.class-pills-section {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px 20px;
+  overflow-x: auto;
+}
+
+.class-pills-section::-webkit-scrollbar {
+  display: none;
+}
+
+.class-pill {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.class-pill.blue-pill {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+.class-pill.red-pill {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+}
+
+.class-pill.purple-pill {
+  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+}
+
+.class-pill.light-purple-pill {
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);
+}
+
+/* Students Grid */
+.students-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 20px 24px;
+}
+
+.student-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.student-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.student-avatar.purple-avatar {
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);
+}
+
+.avatar-initials {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.student-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px 0;
+  text-align: center;
+}
+
+.student-class {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.student-btn {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.student-btn.yellow-btn {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.student-btn.pink-btn {
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+}
+
+/* Add Student Button */
+.add-student-section {
+  padding: 0 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-student-btn {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  border: none;
+  border-radius: 24px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  transition: transform 0.2s;
+}
+
+.add-student-btn:active {
+  transform: scale(0.98);
+}
+
+.add-icon {
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .students-grid {
+    gap: 12px;
+  }
+
+  .student-card {
+    padding: 16px 12px;
+  }
+
+  .student-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar-initials {
+    font-size: 20px;
+  }
+}

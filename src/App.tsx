@@ -91,6 +91,10 @@ import ICANFeedPage from './pages/Community/ICANFeedPage';
 import WAECFeedPage from './pages/Community/WAECFeedPage';
 import AskQuestionPage from './pages/Community/AskQuestionPage';
 import MentorPage from './pages/Community/MentorPage';
+import ProfilePage from './pages/Community/ProfilePage';
+import MessagePage from './pages/Community/MessagePage';
+import DashboardStats from './pages/SchDashboard/DashboardStats';
+import ManageStudents from './pages/SchDashboard/ManageStudents';
 
 setupIonicReact();
 
@@ -266,6 +270,18 @@ const App: React.FC = () => (
               </Route>
                  <Route exact path="/tabs/mentor">
                 <MentorPage />
+              </Route>
+                 <Route exact path="/tabs/profile-page">
+                <ProfilePage />
+              </Route>
+                 <Route exact path="/tabs/message">
+                <MessagePage />
+              </Route>
+                 <Route exact path="/tabs/school-dashboard">
+                <DashboardStats />
+              </Route>
+                 <Route exact path="/tabs/manage-student">
+                <ManageStudents />
               </Route>
               <Route exact path="/tabs">
                 <Redirect to="/tabs/tab1" />
