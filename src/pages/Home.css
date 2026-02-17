@@ -352,3 +352,42 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* ===== QUICK LINKS ===== */
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.quick-link-btn {
+  border: none;
+  border-radius: 16px;
+  height: 64px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.quick-link-btn:active {
+  transform: scale(0.97);
+}
+
+.quick-link-btn.purple {
+  background: linear-gradient(135deg, #7c6ff7 0%, #5b4de8 100%);
+}
+
+.quick-link-btn.orange {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
+}
+
+.quick-link-btn.pink {
+  background: linear-gradient(135deg, #e91e8c 0%, #c2185b 100%);
+}
+
+.quick-link-btn.yellow {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}

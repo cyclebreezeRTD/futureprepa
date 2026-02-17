@@ -123,6 +123,17 @@ const Home: React.FC = () => {
             </div>
           </div>
 
+          {/* Quick Links Section */}
+          <div className="section-container">
+            <h3 className="section-title" style={{ marginBottom: '14px' }}>Quicks Links</h3>
+            <div className="quick-links-grid">
+              <button className="quick-link-btn purple">Practice CBT</button>
+              <button className="quick-link-btn orange">Physics Lab</button>
+              <button className="quick-link-btn pink">Solve Equation</button>
+              <button className="quick-link-btn yellow">Career fair</button>
+            </div>
+          </div>
+
         </div>
 
         {/* Bottom padding for tab bar */}
