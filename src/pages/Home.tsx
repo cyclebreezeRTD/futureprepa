@@ -1,194 +1,128 @@
 import React from 'react';
 import {
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonIcon,
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonGrid,
-  IonRow,
-  IonCol,
 } from '@ionic/react';
-import { searchOutline, notificationsOutline, flameOutline, informationCircleOutline } from 'ionicons/icons';
+import { searchOutline, notificationsOutline, flameOutline, informationCircleOutline, timeOutline } from 'ionicons/icons';
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
-    <IonPage>
-      <IonHeader className="ion-no-border home-page-header">
-        <IonToolbar className="home-header">
-          <div className="header-wrapper">
-            {/* Top row with icons */}
-            <div className="header-top-row">
-              <div className="menu-icon">
-                <div className="hamburger-menu">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+    <IonPage style={{ background: '#5bc8f5' }}>
+      <IonContent 
+        fullscreen 
+        className="home-content" 
+        scrollY={true}
+        style={{ '--background': '#5bc8f5', '--padding-start': '0', '--padding-end': '0' }}
+      >
+
+        {/* ===== HEADER ===== */}
+        <div className="home-header">
+          <div className="header-top-row">
+            <div className="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div className="header-actions">
+              <IonIcon icon={searchOutline} className="header-icon" />
+              <IonIcon icon={notificationsOutline} className="header-icon" />
+            </div>
+          </div>
+
+          <div className="user-greeting">
+            <div className="avatar">
+              <img src="https://i.pravatar.cc/100?img=11" alt="User avatar" />
+            </div>
+            <div className="greeting-text">
+              <p className="greeting-label">Welcome Back,</p>
+              <h2 className="user-name">Lautaro Martinez</h2>
+            </div>
+          </div>
+        </div>
+
+        {/* ===== BODY ===== */}
+        <div className="home-body">
+
+          {/* Today's Focus */}
+          <div className="section-container">
+            <div className="section-header">
+              <div className="section-title-row">
+                <span className="focus-emoji">🖥️</span>
+                <h3 className="section-title">Today's Focus</h3>
+              </div>
+              <button className="exam-badge">Exam Readiness : 50%</button>
+            </div>
+
+            <div className="focus-card">
+              <div className="focus-card-left">
+                <div className="focus-number-row">
+                  <span className="focus-number">300</span>
+                  <span className="focus-points-label">Points</span>
                 </div>
-              </div>
-              <div className="header-actions">
-                <IonIcon icon={searchOutline} className="header-icon" />
-                <IonIcon icon={notificationsOutline} className="header-icon" />
-              </div>
-            </div>
-            
-            {/* Bottom row with profile greeting */}
-            <div className="user-greeting">
-              <div className="avatar">
-                <img src="https://via.placeholder.com/50" alt="User avatar" />
-              </div>
-              <div className="greeting-text">
-                <p className="greeting-label">Welcome Back</p>
-                <h2 className="user-name">Lourens Martinez</h2>
-              </div>
-            </div>
-          </div>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonContent fullscreen className="home-content" scrollEvents={true}>
-        {/* Today's Focus Section */}
-        <div className="section-container">
-          <div className="section-header">
-            <div className="section-title-row">
-              <IonIcon icon={flameOutline} className="section-icon flame" />
-              <h3 className="section-title">Today's Focus</h3>
-            </div>
-            <button className="view-link">Start Revision 10m</button>
-          </div>
-
-          <IonCard className="focus-card">
-            <IonCardContent className="focus-card-content">
-              <div className="focus-stat">
-                <h1 className="focus-number">300</h1>
                 <p className="focus-subtitle">
-                  Cards left to study for WAEC
-                  <br />
-                  Let's dive on into One Card.
+                  Cross 500 within the week to<br />get a free One on One Class.
                 </p>
               </div>
-              <IonButton className="start-btn" expand="block">
-                Start with card
-              </IonButton>
-            </IonCardContent>
-          </IonCard>
-        </div>
-
-        {/* 4 Trending Tests Section */}
-        <div className="section-container">
-          <div className="section-header">
-            <div className="section-title-row">
-              <h3 className="section-title">4 Trending Tests</h3>
-              <IonIcon icon={informationCircleOutline} className="info-icon" />
+              <button className="take-test-btn">Take test now</button>
             </div>
           </div>
 
-          <IonGrid className="tests-grid">
-            <IonRow>
-              <IonCol size="6">
-                <IonCard className="test-card pink">
-                  <IonCardContent>
-                    <p className="test-subject">Law of Motion</p>
-                    <div className="test-info">
-                      <IonIcon icon={flameOutline} className="test-icon" />
-                      <span className="test-time">1d 18s</span>
-                    </div>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-              <IonCol size="6">
-                <IonCard className="test-card orange">
-                  <IonCardContent>
-                    <p className="test-subject">Law of Motion</p>
-                    <div className="test-info">
-                      <IonIcon icon={flameOutline} className="test-icon" />
-                      <span className="test-time">1d 10s</span>
-                    </div>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol size="6">
-                <IonCard className="test-card blue">
-                  <IonCardContent>
-                    <p className="test-subject">Law of Motion</p>
-                    <div className="test-info">
-                      <IonIcon icon={flameOutline} className="test-icon" />
-                      <span className="test-time">1d 18s</span>
-                    </div>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-              <IonCol size="6">
-                <IonCard className="test-card green">
-                  <IonCardContent>
-                    <p className="test-subject">Law of Motion</p>
-                    <div className="test-info">
-                      <IonIcon icon={flameOutline} className="test-icon" />
-                      <span className="test-time">1d 10s</span>
-                    </div>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
-        </div>
+          {/* 4 Pending Tests */}
+          <div className="section-container">
+            <div className="section-header">
+              <div className="section-title-row">
+                <h3 className="section-title">4 Pending tests</h3>
+                <IonIcon icon={informationCircleOutline} className="info-icon" />
+              </div>
+            </div>
 
-        {/* English Language WAEC Section */}
-        <div className="section-container">
-          <IonCard className="subject-card">
-            <IonCardContent className="subject-card-content">
-              <div className="subject-info">
-                <div className="subject-icon-wrapper">
-                  <img src="https://via.placeholder.com/50" alt="Subject" />
+            <div className="tests-grid">
+              {[
+                { subject: 'Law of Motion', category: 'Physics',   color: '#8b5cf6', time: '1d:10Hr' },
+                { subject: 'Law of Motion', category: 'Chemistry', color: '#f97316', time: '1d:10Hr' },
+                { subject: 'Law of Motion', category: 'Maths',     color: '#3b82f6', time: '1d:10Hr' },
+                { subject: 'Law of Motion', category: 'Physics',   color: '#8b5cf6', time: '1d:10Hr' },
+              ].map((test, i) => (
+                <div key={i} className="test-card">
+                  <p className="test-subject">{test.subject}</p>
+                  <div className="test-meta">
+                    <span className="test-category" style={{ color: test.color }}>{test.category}</span>
+                    <div className="test-time-row">
+                      <IonIcon icon={timeOutline} className="time-icon" />
+                      <span className="test-time">{test.time}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* English Language WAEC */}
+          <div className="section-container">
+            <div className="subject-card">
+              <div className="subject-card-inner">
+                <div className="subject-img-wrapper">
+                  <img src="https://via.placeholder.com/80x60" alt="English" className="subject-img" />
                 </div>
                 <div className="subject-details">
                   <h4 className="subject-name">English Language WAEC</h4>
-                  <p className="subject-progress">21 of 60 Lessons</p>
+                  <p className="subject-lessons">21 of 50 Lessons</p>
+                  <div className="progress-bar-wrapper">
+                    <div className="progress-bar">
+                      <div className="progress-fill" style={{ width: '50%' }}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="subject-action">
-                <IonButton className="continue-btn">Continue</IonButton>
+              <div className="subject-card-footer">
+                <span className="continue-label">Continue Lesson</span>
+                <span className="completed-label">50% completed</span>
               </div>
-            </IonCardContent>
-          </IonCard>
-        </div>
+            </div>
+          </div>
 
-        {/* Quick Links Section */}
-        <div className="section-container">
-          <h3 className="section-title">Quick Links</h3>
-          <IonGrid className="quick-links-grid">
-            <IonRow>
-              <IonCol size="6">
-                <IonButton expand="block" className="quick-link-btn purple">
-                  Practice CBT
-                </IonButton>
-              </IonCol>
-              <IonCol size="6">
-                <IonButton expand="block" className="quick-link-btn orange">
-                  Physics Lab
-                </IonButton>
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol size="6">
-                <IonButton expand="block" className="quick-link-btn pink">
-                  Solve Equation
-                </IonButton>
-              </IonCol>
-              <IonCol size="6">
-                <IonButton expand="block" className="quick-link-btn yellow">
-                  Tutor AI
-                </IonButton>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
         </div>
 
         {/* Bottom padding for tab bar */}
