@@ -8,7 +8,9 @@ import studentIcon from "../images/student.png";
 import parentIcon from "../images/book.png";
 import teacherIcon from "../images/cap.png";
 import professionalIcon from "../images/cpd.png";
-
+import arrow from "../images/arrow1.png";
+import arrow2 from "../images/arrow2.png";
+import arrow3 from "../images/arrow3.png";
 interface Role {
   id: string;
   title: string;
@@ -62,7 +64,9 @@ const Role: React.FC = () => {
     <IonPage>
       <IonContent className="role-content">
         <div className="role-container">
-          
+                   <div className="decorative-elements top">
+            <img src={arrow} alt="" className="arrow arrow-top" />
+          </div>
           {/* Header Section */}
           <div className="role-header">
             <h1 className="role-title">What is your Role?</h1>

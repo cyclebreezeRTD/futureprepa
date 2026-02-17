@@ -42,7 +42,7 @@
 }
 
 .language-option {
-  background: rgba(255, 255, 255, 0.08);
+  /* background: rgba(255, 255, 255, 0.08); */
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 16px 20px;
@@ -167,4 +167,36 @@
 
 .language-button-container {
   animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+
+
+.arrow {
+  position: absolute;
+  opacity: 0.6; /* Increased from 0.3 to make arrows brighter */
+  filter: brightness(1.2); /* Makes them even brighter */
+}
+
+.arrow-top {
+  top: 40px;
+  right: 20px;
+  width: 100px; /* Made bigger */
+  height: auto;
+  transform: rotate(-15deg);
+}
+
+.arrow-bottom-left {
+  bottom: -20px;
+  left: 20px;
+  width: 80px; /* Made bigger */
+  height: auto;
+  transform: rotate(-10deg);
+}
+
+.arrow-bottom-right {
+  bottom: 40px;
+  right: 30px;
+  width: 90px; /* Made bigger */
+  height: auto;
+  transform: rotate(-20deg);
 }

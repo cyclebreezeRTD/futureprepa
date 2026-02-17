@@ -3,7 +3,9 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { eyeOffOutline, eyeOutline } from 'ionicons/icons';
 import './SignUp.css';
-
+import arrow from "../images/arrow1.png";
+import arrow2 from "../images/arrow2.png";
+import arrow3 from "../images/arrow3.png";
 // Import your character image and social icons
 import signupCharacter from "../images/man.png";
 import googleIcon from "../images/google.png";
@@ -36,7 +38,10 @@ const SignUp: React.FC = () => {
     <IonPage>
       <IonContent className="signup-content">
         <div className="signup-container">
-          
+                 <div className="decorative-elements top">
+            <img src={arrow} alt="" className="arrow arrow-top" />
+          </div>
+
           {/* Character Image */}
           <div className="signup-character-section">
             <img src={signupCharacter} alt="Sign Up" className="signup-character" />

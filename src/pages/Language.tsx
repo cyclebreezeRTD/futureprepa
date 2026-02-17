@@ -2,7 +2,9 @@ import { IonContent, IonPage, IonButton } from '@ionic/react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Language.css';
-
+import arrow from "../images/arrow1.png";
+import arrow2 from "../images/arrow2.png";
+import arrow3 from "../images/arrow3.png";
 const Language: React.FC = () => {
   const history = useHistory();
   const [selectedLanguage, setSelectedLanguage] = useState<string>('English');
@@ -58,6 +60,10 @@ const Language: React.FC = () => {
           {/* Bottom decorative elements */}
           <div className="decorative-bottom-lang">
             <div className="decorative-shape-lang decorative-left-lang"></div>
+          </div>
+                  <div className="decorative-elements bottom">
+            <img src={arrow2} alt="" className="arrow arrow-bottom-left" />
+         
           </div>
         </div>
       </IonContent>
