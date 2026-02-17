@@ -125,6 +125,7 @@ const FreeTrial: React.FC = () => {
               expand="block" 
               className="start-trial-button"
               onClick={handleStartTrial}
+                       style={{color: "white"}}
             >
               Start Free trial Now
             </IonButton>

@@ -52,6 +52,7 @@ const Language: React.FC = () => {
               expand="block" 
               className="language-continue-button"
               onClick={handleContinue}
+                       style={{color: "white"}}
             >
               Continue
             </IonButton>

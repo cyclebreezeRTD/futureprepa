@@ -86,6 +86,7 @@ const Notify: React.FC = () => {
               expand="block" 
               className="allow-button"
               onClick={handleAllow}
+              style={{color: "white"}}
             >
               Allow Notification
             </IonButton>

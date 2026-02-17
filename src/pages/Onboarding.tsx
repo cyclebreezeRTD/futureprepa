@@ -39,6 +39,7 @@ const Onboarding: React.FC = () => {
               expand="block" 
               className="continue-button"
               onClick={handleContinue}
+                       style={{color: "white"}}
             >
               Continue
             </IonButton>

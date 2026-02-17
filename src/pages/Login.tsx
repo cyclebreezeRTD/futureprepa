@@ -95,6 +95,7 @@ const Login: React.FC = () => {
               expand="block" 
               className="signup-button"
               onClick={handleSignUp}
+                       style={{color: "white"}}
             >
              Login
             </IonButton>

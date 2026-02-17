@@ -34,7 +34,7 @@
 
 .form-label {
   display: block;
-  color: white;
+  color: white !important;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
@@ -45,16 +45,20 @@
   position: relative;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  border-radius: 25px;
+  /* background: rgba(255, 255, 255, 0.08); */
+ background: transparent !important;
+  background-color: transparent !important;
+  border: 2.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px !important;
   padding: 0 18px;
   transition: all 0.3s ease;
 }
 
+
+
 .input-wrapper:focus-within {
-  border-color: #229CE9;
-  background: rgba(255, 255, 255, 0.12);
+  /* border-color: #229CE9; */
+  /* background: rgba(255, 255, 255, 0.12); */
 }
 
 .input-icon {
@@ -64,15 +68,15 @@
 }
 
 .form-input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 14px;
-  padding: 14px 0;
+  background: transparent !important;
+  background-color: transparent !important;
+  
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  /* This ^ forces transparency even on autofill */
+  box-shadow: none !important;
+  border: none !important;
+  -webkit-appearance: none !important;
 }
-
 .form-input::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }

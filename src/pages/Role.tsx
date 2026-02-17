@@ -109,6 +109,7 @@ const Role: React.FC = () => {
               expand="block" 
               className="role-continue-button"
               onClick={handleContinue}
+                       style={{color: "white"}}
             >
               Continue
             </IonButton>
