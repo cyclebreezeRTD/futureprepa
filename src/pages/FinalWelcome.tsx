@@ -83,19 +83,13 @@ const FinalWelcome: React.FC = () => {
     {
       id: 'opportunities',
       icon: notifIcon3,
-      title: 'Shtart Learning Now',
+      title: 'Start Learning Now',
       color: '#E91E63'
     }
   ];
 
   const handleAllow = () => {
-    // Request notification permission
-    if ('Notification' in window) {
-      Notification.requestPermission().then((permission) => {
-        console.log('Notification permission:', permission);
-      });
-    }
-    history.push('/free-trial');
+    history.push('/tabs/home');
   };
 
   const handleNotNow = () => {
@@ -138,12 +132,10 @@ const FinalWelcome: React.FC = () => {
               onClick={handleAllow}
               style={{color: "white"}}
             >
-              Allow Notification
+            Go to dashboard
             </IonButton>
             
-            <button className="not-now-button" onClick={handleNotNow}>
-              Not Now
-            </button>
+    
           </div>
 
           {/* Bottom decorative element */}
