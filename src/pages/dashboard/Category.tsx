@@ -1,71 +1,111 @@
-import {
-  IonContent,
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonSegment,
-  IonSegmentButton,
-  IonLabel,
-  IonCard,
-  IonCardContent,
-  IonButton,
-  IonIcon
-} from '@ionic/react';
-import { bookmarkOutline } from 'ionicons/icons';
+import React, { useState } from 'react';
+import { IonContent, IonPage, IonIcon } from '@ionic/react';
+import { chevronBackOutline } from 'ionicons/icons';
 import './Category.css';
 
 const Category: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const filters = [
+    { id: 'all',          label: 'All',          color: '#4c8dff' },
+    { id: 'unread',       label: 'Unread',       color: '#f4c430' },
+    { id: 'messages',     label: 'Messages',     color: '#ff8c42' },
+    { id: 'announcement', label: 'Announcement', color: '#e91e8c' },
+    { id: 'event',        label: 'Event',        color: '#4caf50' },
+    { id: 'promo',        label: 'Promo',        color: '#9b51e0' },
+  ];
+
+  const notifications = [
+    {
+      title: 'Resume your learning',
+      desc: 'You stopped at Question 23 of WAEC Maths. Continue where you left off?',
+      time: '2 Hours Ago',
+      action: 'Resume Learning',
+    },
+    {
+      title: 'Resume your learning',
+      desc: 'You stopped at Question 23 of WAEC Maths. Continue where you left off?',
+      time: '2 Hours Ago',
+      action: 'Resume Learning',
+    },
+    {
+      title: 'Resume your learning',
+      desc: 'You stopped at Question 23 of WAEC Maths. Continue where you left off?',
+      time: '2 Hours Ago',
+      action: 'Resume Learning',
+    },
+    {
+      title: 'Resume your learning',
+      desc: 'You stopped at Question 23 of WAEC Maths. Continue where you left off?',
+      time: '2 Hours Ago',
+      action: 'Resume Learning',
+    },
+    {
+      title: 'Resume your learning',
+      desc: 'You stopped at Question 23 of WAEC Maths. Continue where you left off?',
+      time: '2 Hours Ago',
+      action: 'Resume Learning',
+    },
+  ];
+
   return (
     <IonPage>
-      <IonHeader className="category-header">
-        <IonToolbar>
-          <IonTitle>Categories</IonTitle>
-        </IonToolbar>
+      <IonContent fullscreen scrollY={true} className="category-content">
 
-        <div className="subtitle">
-          Stay updated with your learning journey
+        {/* ===== HEADER ===== */}
+        <div className="cat-header">
+          <div className="cat-header-top">
+            <IonIcon icon={chevronBackOutline} className="back-icon" />
+            <h1 className="cat-title">Categories</h1>
+          </div>
+          <p className="cat-subtitle">Stay updated with your learning journey</p>
+
+          {/* Filter Pills - 2 rows */}
+          <div className="filter-pills">
+            {filters.map((f) => (
+              <button
+                key={f.id}
+                className={`pill ${activeFilter === f.id ? 'active' : ''}`}
+                style={{
+                  background: activeFilter === f.id ? f.color : 'transparent',
+                  borderColor: f.color,
+                  color: activeFilter === f.id ? '#fff' : f.color,
+                }}
+                onClick={() => setActiveFilter(f.id)}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <IonSegment value="unread" className="segment">
-          <IonSegmentButton value="unread">
-            <IonLabel>Unread</IonLabel>
-          </IonSegmentButton>
-          <IonSegmentButton value="messages">
-            <IonLabel>Messages</IonLabel>
-          </IonSegmentButton>
-        </IonSegment>
+        {/* ===== NOTIFICATION LIST ===== */}
+        <div className="notif-list">
+          {notifications.map((n, i) => (
+            <div key={i} className="notif-card">
+              {/* Icon */}
+              <div className="notif-icon-box">
+                <img
+                  src="https://via.placeholder.com/36"
+                  alt="icon"
+                  className="notif-icon-img"
+                />
+              </div>
 
-        <div className="chips">
-          <span className="chip blue">Announcement</span>
-          <span className="chip red">Event</span>
-          <span className="chip purple">Promo</span>
+              {/* Text */}
+              <div className="notif-body">
+                <h4 className="notif-title">{n.title}</h4>
+                <p className="notif-desc">{n.desc}</p>
+                <div className="notif-footer">
+                  <span className="notif-time">{n.time}</span>
+                  <span className="notif-action">{n.action}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </IonHeader>
 
-      <IonContent fullscreen className="category-content">
-        {[1, 2, 3, 4, 5].map((_, index) => (
-          <IonCard key={index} className="resume-card">
-            <IonCardContent className="card-content">
-              <div className="icon-box">
-                <IonIcon icon={bookmarkOutline} />
-              </div>
-
-              <div className="card-text">
-                <h3>Resume your learning</h3>
-                <p>
-                  You stopped at Question 23 of WAEC Maths.
-                  Continue where you left off?
-                </p>
-                <span className="time">2 Hours Ago</span>
-              </div>
-
-              <IonButton fill="clear" className="resume-btn">
-                Resume Learning
-              </IonButton>
-            </IonCardContent>
-          </IonCard>
-        ))}
+        <div style={{ height: '80px' }} />
       </IonContent>
     </IonPage>
   );
