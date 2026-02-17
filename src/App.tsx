@@ -100,6 +100,7 @@ import ManageParent from './pages/SchDashboard/ManageParent';
 import AddTeacher from './pages/SchDashboard/AddTeacher';
 import ParentInvited from './pages/SchDashboard/ParentInvited';
 import InviteParent from './pages/SchDashboard/InviteParent';
+import ParentDash from './pages/SchDashboard/ParentDash';
 
 setupIonicReact();
 
@@ -302,6 +303,9 @@ const App: React.FC = () => (
               </Route>
                  <Route exact path="/tabs/invite-parent">
                 <InviteParent />
+              </Route>
+                 <Route exact path="/tabs/parent-dashboard">
+                <ParentDash />
               </Route>
               <Route exact path="/tabs">
                 <Redirect to="/tabs/tab1" />

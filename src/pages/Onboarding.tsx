@@ -2,7 +2,9 @@ import { IonContent, IonPage, IonButton } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import './Onboarding.css';
 import onboardingImage from "../images/man.png"; // Your 3D character image
-
+import arrow from "../images/arrow1.png";
+import arrow2 from "../images/arrow2.png";
+import arrow3 from "../images/arrow3.png";
 const Onboarding: React.FC = () => {
   const history = useHistory();
 
@@ -14,7 +16,9 @@ const Onboarding: React.FC = () => {
     <IonPage>
       <IonContent className="onboarding-content">
         <div className="onboarding-container">
-          
+                <div className="decorative-elements top">
+                      <img src={arrow} alt="" className="arrow arrow-top" />
+                    </div>
           {/* Character Image with border */}
           <div className="image-container">
             <img src={onboardingImage} alt="Welcome" className="onboarding-image" />
@@ -42,9 +46,9 @@ const Onboarding: React.FC = () => {
           </div>
 
           {/* Bottom decorative elements */}
-          <div className="decorative-bottom">
-            <div className="decorative-shape decorative-left"></div>
-            <div className="decorative-shape decorative-right"></div>
+             <div className="decorative-elements bottom">
+            <img src={arrow2} alt="" className="arrow arrow-bottom-left" />
+         
           </div>
         </div>
       </IonContent>
