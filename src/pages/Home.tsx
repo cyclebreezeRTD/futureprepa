@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             <div className="section-header">
               <div className="section-title-row">
                 <h3 className="section-title2">4 Pending tests</h3>
-                <IonIcon icon={informationCircleOutline} className="info-icon" />
+                <IonIcon icon={informationCircleOutline} className="info-icon" style={{color: "red"}} />
               </div>
             </div>
 
