@@ -5,9 +5,8 @@
 
 /* HEADER */
 .categories-header {
-  --background: linear-gradient(180deg, #4fe3ff 0%, #46bfff 100%);
-  background: linear-gradient(180deg, #4fe3ff 0%, #46bfff 100%);
-    padding-top: 100px;
+
+    padding-top: 20px;
 }
 
 .categories-toolbar {
@@ -16,7 +15,7 @@
 }
 
 .categories-title {
-  color: #fff;
+  color: #000;
   font-weight: 700;
   font-size: 18px;
 }
@@ -29,7 +28,7 @@
 /* Subtitle */
 .categories-sub {
 
-  background: linear-gradient(180deg, #4fe3ff 0%, #46bfff 100%);
+
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
   font-size: 12px;

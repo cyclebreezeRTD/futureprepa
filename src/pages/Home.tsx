@@ -50,7 +50,7 @@ const Home: React.FC = () => {
             <div className="section-header">
               <div className="section-title-row">
                 <span className="focus-emoji">🖥️</span>
-                <h3 className="section-title">Today's Focus</h3>
+                <h3 className="section-title2">Today's Focus</h3>
               </div>
               <button className="exam-badge">Exam Readiness : 50%</button>
             </div>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
           <div className="section-container">
             <div className="section-header">
               <div className="section-title-row">
-                <h3 className="section-title">4 Pending tests</h3>
+                <h3 className="section-title2">4 Pending tests</h3>
                 <IonIcon icon={informationCircleOutline} className="info-icon" />
               </div>
             </div>
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
 
           {/* Quick Links Section */}
           <div className="section-container">
-            <h3 className="section-title" style={{ marginBottom: '14px' }}>Quicks Links</h3>
+            <h3 className="section-title2" style={{ marginBottom: '14px' }}>Quicks Links</h3>
             <div className="quick-links-grid">
               <button className="quick-link-btn purple">Practice CBT</button>
               <button className="quick-link-btn orange">Physics Lab</button>
