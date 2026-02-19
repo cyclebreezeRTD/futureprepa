@@ -20,7 +20,7 @@ import {
 } from 'ionicons/icons';
 import './CourseDetails.css';
 
-const CourseDetails: React.FC = () => {
+const CourseDetails: React.FC = () => { 
   return (
     <IonPage>
       <IonHeader className="ion-no-border course-details-header">

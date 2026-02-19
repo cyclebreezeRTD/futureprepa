@@ -36,45 +36,53 @@ ion-content {
   font-size: 12px;
   color: #888;
 }
-
 /* Cards stack */
 .cards {
-  padding-left: 16px;
+  padding: 0 16px;
+  position: relative;
 }
 
 /* Base card */
 .subject-card {
-  height: 110px;
-  border-radius: 16px;
-  margin-bottom: -22px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 24px;
   color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin-bottom: -30px; /* overlap effect */
 }
 
-/* Individual gradients */
+/* Each card gets shorter to create the cascading stack */
 .subject-card.math {
-  background: linear-gradient(135deg, #5b7cfa, #7a4de8);
+  height: 160px;
+  background: linear-gradient(135deg, #6a7fe8, #8a5de8);
+  z-index: 4;
 }
 
 .subject-card.physics {
-  background: linear-gradient(135deg, #ff5f7e, #ff3d5a);
+  height: 140px;
+  background: linear-gradient(135deg, #ff6b8a, #e8354a);
+  z-index: 3;
 }
 
 .subject-card.chemistry {
-  background: linear-gradient(135deg, #ff9a3c, #ff6a00);
+  height: 120px;
+  background: linear-gradient(135deg, #ffaa4a, #ff6a00);
+  z-index: 2;
 }
 
 .subject-card.reasoning {
-  background: linear-gradient(135deg, #d4a24c, #b8872b);
-  color: #fff;
+  height: 100px;
+  background: linear-gradient(135deg, #d4a84c, #b8872b);
+  z-index: 1;
+  margin-bottom: 0;
 }
 
-/* Card title */
 .subject-card h2 {
   margin: 0;
+  letter-spacing: 0.2px;
 }

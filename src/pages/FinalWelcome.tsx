@@ -1,67 +1,7 @@
-// import { IonContent, IonPage, IonButton } from '@ionic/react';
-// import { useHistory } from 'react-router-dom';
-// import './FinalWelcome.css';
 
-// import launchIcon from "../images/not3.png"; // Rocket/launch icon
-
-// const FinalWelcome: React.FC = () => {
-//   const history = useHistory();
-
-//   const handleGoToDashboard = () => {
-//     history.push('/tabs/home');
-//   };
-
-//   return (
-//     <IonPage>
-//       <IonContent className="final-welcome-content">
-//         <div className="final-welcome-container">
-          
-//           {/* Welcome Text */}
-//           <div className="final-welcome-text">
-//             <h1 className="final-welcome-title">
-//               Welcome to<br />FUTUREPREPA!
-//             </h1>
-//             <p className="final-welcome-subtitle">
-//               Your journey to success starts now. Your 1-month free trial is active.
-//             </p>
-//           </div>
-
-//           {/* Launch Icon - Now side by side with text */}
-//           <div className="launch-section">
-//             <div className="launch-card">
-//               <div className="launch-icon-container">
-//                 <img src={launchIcon} alt="Start Learning Now!" className="launch-icon" />
-//               </div>
-//               <p className="launch-text">Start Learning Now!</p>
-//             </div>
-//           </div>
-
-//           {/* Go to Dashboard Button */}
-//           <div className="final-welcome-button-container">
-//             <IonButton 
-//               expand="block" 
-//               className="dashboard-button"
-//               onClick={handleGoToDashboard}
-//             >
-//               Go to Dashboard
-//             </IonButton>
-//           </div>
-
-//           {/* Bottom decorative element */}
-//           <div className="decorative-bottom-final">
-//             <div className="decorative-shape-final"></div>
-//           </div>
-
-//         </div>
-//       </IonContent>
-//     </IonPage>
-//   );
-// };
-
-// export default FinalWelcome;
 import { IonContent, IonPage, IonButton } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
-import './Notify.css';
+import './FinalWelcome.css';
 
 // Import notification icons
 import notifIcon1 from "../images/not1.png"; // Bell/reminder icon
@@ -96,51 +36,34 @@ const FinalWelcome: React.FC = () => {
     history.push('/free-trial');
   };
 
-  return (
+return (
     <IonPage>
-      <IonContent className="notification-content">
-        <div className="notification-container">
+      <IonContent className="fw-content">
+        <div className="fw-container">
           
-          {/* Header Section */}
-          <div className="notification-header">
-            <h1 className="notification-title">WELCOME TO FUTURE PREPA</h1>
-            <p className="notification-subtitle">
-             Your journey to success starts now. Your 1-month free trial is active.
+          <div className="fw-header">
+            <h1 className="fw-title">WELCOME TO FUTURE PREPA</h1>
+            <p className="fw-subtitle">
+              Your journey to success starts now. Your 1-month free trial is active.
             </p>
           </div>
 
-          {/* Notification Reasons */}
-          <div className="notification-reasons">
-            {reasons.map((reason) => (
-              <div key={reason.id} className="notification-reason">
-                <div 
-                  className="reason-icon-container"
-                  style={{ backgroundColor: reason.color }}
-                >
-                  <img src={reason.icon} alt="" className="reason-icon" />
-                </div>
-                <p className="reason-text">{reason.title}</p>
-              </div>
-            ))}
+          <div className="fw-card">
+            <div className="fw-card-icon" style={{ backgroundColor: '#E91E63' }}>
+              <img src={notifIcon3} alt="" className="fw-icon" />
+            </div>
+            <p className="fw-card-text">Start Learning Now</p>
           </div>
 
-          {/* Buttons */}
-          <div className="notification-buttons">
+          <div className="fw-buttons">
             <IonButton 
               expand="block" 
-              className="allow-button"
+              className="fw-button"
               onClick={handleAllow}
-              style={{color: "white"}}
+              style={{ color: "white" }}
             >
-            Go to dashboard
+              Go to dashboard
             </IonButton>
-            
-    
-          </div>
-
-          {/* Bottom decorative element */}
-          <div className="decorative-bottom-notif">
-            <div className="decorative-shape-notif"></div>
           </div>
 
         </div>

@@ -1,0 +1,55 @@
+.custom-tab-bar {
+  --background: #ffffff;
+  background: #ffffff !important;
+  height: 70px;
+  padding: 4px 0;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+}
+
+ion-tab-bar.custom-tab-bar {
+  background: #ffffff !important;
+}
+
+.tab-button {
+  --color: #999999;
+  --color-selected: #e91e8c;
+  --background: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --ripple-color: transparent;
+}
+
+.tab-icon {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.tab-label {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Center button */
+.center-tab ion-label {
+  display: none;
+}
+
+.center-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  background: #e8409a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(232, 64, 154, 0.35);
+  margin-top: -10px;
+}
+
+.center-icon {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0;
+}

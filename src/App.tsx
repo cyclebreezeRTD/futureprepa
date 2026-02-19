@@ -101,10 +101,21 @@ import AddTeacher from './pages/SchDashboard/AddTeacher';
 import ParentInvited from './pages/SchDashboard/ParentInvited';
 import InviteParent from './pages/SchDashboard/InviteParent';
 import ParentDash from './pages/SchDashboard/ParentDash';
-
+import WhiteTab from './pages/WhiteTab';
+import { useLocation } from 'react-router-dom';
 setupIonicReact();
-
+const TabBarSelector: React.FC = () => {
+  const location = useLocation();
+  
+  if (location.pathname === '/tabs/home') {
+    return <CustomTabBar />;
+  }
+  return <WhiteTab />;
+};
 const App: React.FC = () => (
+
+
+
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
@@ -142,193 +153,70 @@ const App: React.FC = () => (
         </Route>
         
     
-        <Route path="/tabs">
-          <IonTabs>
-            <IonRouterOutlet>
-              <Route exact path="/tabs/home">
-                <Home />
-              </Route>
-              <Route exact path="/tabs/category">
-                <Category />
-              </Route>
-              <Route exact path="/tabs/explore">
-                <Explore />
-              </Route>
-              <Route exact path="/tabs/message-category">
-                <MesaageCat />
-              </Route>
-              <Route exact path="/tabs/message-list">
-                <MessageList />
-              </Route>
-              <Route exact path="/tabs/chat-list">
-                <ChatList />
-              </Route>
-              <Route exact path="/tabs/chat-room">
-                <ChatRoom />
-              </Route>
-              <Route exact path="/tabs/learn">
-                <Learn />
-              </Route>
-              <Route exact path="/tabs/learns">
-                <Learn2 />
-              </Route>
-              <Route exact path="/tabs/practice-complete">
-                <PracticeComplete />
-              </Route>
-                 <Route exact path="/tabs/waec-details">
-                <WaecDetails />
-              </Route>
-                 {/* <Route exact path="/tabs/waec-practice">
-                <WaecPractice />
-              </Route> */}
-                 {/* <Route exact path="/tabs/waec-quiz">
-                <WaecQuizPractice />
-              </Route> */}
-                 <Route exact path="/tabs/topic-practice">
-                <TopicPractice />
-              </Route>
-                 {/* <Route exact path="/tabs/waec-question">
-                <WaecQuestion />
-              </Route> */}
-                 <Route exact path="/tabs/quiz-question">
-                <QuizQuestion />
-              </Route>
-                 {/* <Route exact path="/tabs/lesson">
-                <CodingLesson />
-              </Route> */}
-                 <Route exact path="/tabs/stem-learning">
-                <STEMLearning />
-              </Route>
-                 <Route exact path="/tabs/ai-chat">
-                <AIChat />
-              </Route>
-                 <Route exact path="/tabs/ai-chat-conversation">
-                <AIChatConversation />
-              </Route>
-                 <Route exact path="/tabs/insights">
-                <Insights />
-              </Route>
-                 <Route exact path="/tabs/learn-courses">
-                <LearnCourses />
-              </Route>
-                 <Route exact path="/tabs/quiz-lectures">
-                <QuizLectures />
-              </Route>
-                 <Route exact path="/tabs/course-details">
-                <CourseDetails />
-              </Route>
-                 <Route exact path="/tabs/tailoring-course">
-                <TailoringCourse />
-              </Route>
-                 <Route exact path="/tabs/tailoring-lesson">
-                <TailoringLesson />
-              </Route>
-                 <Route exact path="/tabs/insight-analytics">
-                <InsightsAnalytics />
-              </Route>
-                 <Route exact path="/tabs/opportunity">
-                <Opportunities />
-              </Route>
-                 <Route exact path="/tabs/opportunity-page">
-                <OpportunitiesPage />
-              </Route>
-                 <Route exact path="/tabs/event">
-                <EventsPage />
-              </Route>
-                 <Route exact path="/tabs/all-event">
-                <AllEventsPage />
-              </Route>
-                 <Route exact path="/tabs/job-detail">
-                <JobDetailPage />
-              </Route>
-                 <Route exact path="/tabs/uni-detail">
-                <UniversityDetails />
-              </Route>
-                 <Route exact path="/tabs/event-detail">
-                <EventDetails />
-              </Route>
-                 <Route exact path="/tabs/event-ticket">
-                <EventTicket />
-              </Route>
-                 <Route exact path="/tabs/event-checkout">
-                <EventCheckout />
-              </Route>
-                 <Route exact path="/tabs/event-success">
-                <EventRegistrationSuccess />
-              </Route>
-                 <Route exact path="/tabs/payment-checkout">
-                <PaymentCheckout />
-              </Route>
-                 <Route exact path="/tabs/allevent-ticket">
-                <AllEventTicket />
-              </Route>
-                 <Route exact path="/tabs/community">
-                <CommunityPage />
-              </Route>
-                 <Route exact path="/tabs/ican">
-                <ICANFeedPage />
-              </Route>
-                 <Route exact path="/tabs/waec-feed">
-                <WAECFeedPage />
-              </Route>
-                 <Route exact path="/tabs/ask-question">
-                <AskQuestionPage />
-              </Route>
-                 <Route exact path="/tabs/mentor">
-                <MentorPage />
-              </Route>
-                 <Route exact path="/tabs/profile-page">
-                <ProfilePage />
-              </Route>
-                 <Route exact path="/tabs/message">
-                <MessagePage />
-              </Route>
-                 <Route exact path="/tabs/school-dashboard">
-                <DashboardStats />
-              </Route>
-                 <Route exact path="/tabs/manage-student">
-                <ManageStudents />
-              </Route>
-                 <Route exact path="/tabs/student-details">
-                <StudentDetail />
-              </Route>
-                 <Route exact path="/tabs/manage-parent">
-                <ManageParent />
-              </Route>
-                 <Route exact path="/tabs/add-teacher">
-                <AddTeacher />
-              </Route>
-                 <Route exact path="/tabs/parent-invited">
-                <ParentInvited />
-              </Route>
-                 <Route exact path="/tabs/invite-parent">
-                <InviteParent />
-              </Route>
-                 <Route exact path="/tabs/parent-dashboard">
-                <ParentDash />
-              </Route>
-              <Route exact path="/tabs">
-                <Redirect to="/tabs/tab1" />
-              </Route> 
-            </IonRouterOutlet>
-            {/* <IonTabBar slot="bottom">
-              <IonTabButton tab="tab1" href="/tabs/tab1">
-                <IonIcon aria-hidden="true" icon={triangle} />
-                <IonLabel>Tab 1</IonLabel>
-              </IonTabButton>
-              <IonTabButton tab="tab2" href="/tabs/tab2">
-                <IonIcon aria-hidden="true" icon={ellipse} />
-                <IonLabel>Tab 2</IonLabel>
-              </IonTabButton>
-              <IonTabButton tab="tab3" href="/tabs/tab3">
-                <IonIcon aria-hidden="true" icon={square} />
-                <IonLabel>Tab 3</IonLabel>
-              </IonTabButton>
-            </IonTabBar> */}
+       <Route path="/tabs">
+  <IonTabs>
+    <IonRouterOutlet>
+      <Route exact path="/tabs/home">
+        <Home />
+      </Route>
 
-      <CustomTabBar />
-          </IonTabs>
-        </Route>
+      {/* All other routes */}
+      <Route exact path="/tabs/category"><Category /></Route>
+      <Route exact path="/tabs/explore"><Explore /></Route>
+      <Route exact path="/tabs/message-category"><MesaageCat /></Route>
+      <Route exact path="/tabs/message-list"><MessageList /></Route>
+      <Route exact path="/tabs/chat-list"><ChatList /></Route>
+      <Route exact path="/tabs/chat-room"><ChatRoom /></Route>
+      <Route exact path="/tabs/learn"><Learn /></Route>
+      <Route exact path="/tabs/learns"><Learn2 /></Route>
+      <Route exact path="/tabs/practice-complete"><PracticeComplete /></Route>
+      <Route exact path="/tabs/waec-details"><WaecDetails /></Route>
+      <Route exact path="/tabs/topic-practice"><TopicPractice /></Route>
+      <Route exact path="/tabs/quiz-question"><QuizQuestion /></Route>
+      <Route exact path="/tabs/stem-learning"><STEMLearning /></Route>
+      <Route exact path="/tabs/ai-chat"><AIChat /></Route>
+      <Route exact path="/tabs/ai-chat-conversation"><AIChatConversation /></Route>
+      <Route exact path="/tabs/insights"><Insights /></Route>
+      <Route exact path="/tabs/learn-courses"><LearnCourses /></Route>
+      <Route exact path="/tabs/quiz-lectures"><QuizLectures /></Route>
+      <Route exact path="/tabs/course-details"><CourseDetails /></Route>
+      <Route exact path="/tabs/tailoring-course"><TailoringCourse /></Route>
+      <Route exact path="/tabs/tailoring-lesson"><TailoringLesson /></Route>
+      <Route exact path="/tabs/insight-analytics"><InsightsAnalytics /></Route>
+      <Route exact path="/tabs/opportunity"><Opportunities /></Route>
+      <Route exact path="/tabs/opportunity-page"><OpportunitiesPage /></Route>
+      <Route exact path="/tabs/event"><EventsPage /></Route>
+      <Route exact path="/tabs/all-event"><AllEventsPage /></Route>
+      <Route exact path="/tabs/job-detail"><JobDetailPage /></Route>
+      <Route exact path="/tabs/uni-detail"><UniversityDetails /></Route>
+      <Route exact path="/tabs/event-detail"><EventDetails /></Route>
+      <Route exact path="/tabs/event-ticket"><EventTicket /></Route>
+      <Route exact path="/tabs/event-checkout"><EventCheckout /></Route>
+      <Route exact path="/tabs/event-success"><EventRegistrationSuccess /></Route>
+      <Route exact path="/tabs/payment-checkout"><PaymentCheckout /></Route>
+      <Route exact path="/tabs/allevent-ticket"><AllEventTicket /></Route>
+      <Route exact path="/tabs/community"><CommunityPage /></Route>
+      <Route exact path="/tabs/ican"><ICANFeedPage /></Route>
+      <Route exact path="/tabs/waec-feed"><WAECFeedPage /></Route>
+      <Route exact path="/tabs/ask-question"><AskQuestionPage /></Route>
+      <Route exact path="/tabs/mentor"><MentorPage /></Route>
+      <Route exact path="/tabs/profile-page"><ProfilePage /></Route>
+      <Route exact path="/tabs/message"><MessagePage /></Route>
+      <Route exact path="/tabs/school-dashboard"><DashboardStats /></Route>
+      <Route exact path="/tabs/manage-student"><ManageStudents /></Route>
+      <Route exact path="/tabs/student-details"><StudentDetail /></Route>
+      <Route exact path="/tabs/manage-parent"><ManageParent /></Route>
+      <Route exact path="/tabs/add-teacher"><AddTeacher /></Route>
+      <Route exact path="/tabs/parent-invited"><ParentInvited /></Route>
+      <Route exact path="/tabs/invite-parent"><InviteParent /></Route>
+      <Route exact path="/tabs/parent-dashboard"><ParentDash /></Route>
+      <Route exact path="/tabs"><Redirect to="/tabs/home" /></Route>
+    </IonRouterOutlet>
+
+    {/* Conditionally render tab bar based on current path */}
+    <TabBarSelector />
+  </IonTabs>
+</Route>
         
         {/* Default redirect to welcome */}
         <Route exact path="/">
