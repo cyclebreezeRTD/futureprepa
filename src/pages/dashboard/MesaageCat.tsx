@@ -8,25 +8,23 @@ import {
   IonButtons,
   IonBackButton,
   IonChip,
+  IonIcon,
   IonLabel,
   IonButton,
 } from '@ionic/react';
 import './Message.css';
-
+import './Category.css';
+import { chevronBackOutline } from 'ionicons/icons';
 const MesaageCat: React.FC = () => {
   return (
 <IonPage className="message-cat-page">
   <IonHeader className="ion-no-border categories-header">
-    <IonToolbar className="categories-toolbar">
-      <IonButtons slot="start">
-        <IonBackButton defaultHref="/" text="" />
-      </IonButtons>
-      <IonTitle className="categories-title">Categories</IonTitle>
-    </IonToolbar>
+          <div className="cat-header-top">
+            <IonIcon icon={chevronBackOutline} className="back-icon" />
+            <h1 className="cat-title">Categories</h1>
+          </div>
+          <p className="cat-subtitle">Stay updated with your learning journey</p>
 
-    <div className="categories-sub">
-      Stay updated with your learning journey
-    </div>
 
     <div className="categories-chips">
       <IonChip className="pill all">

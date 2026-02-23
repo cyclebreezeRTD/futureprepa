@@ -38,7 +38,7 @@
 
 /* Pills */
 .categories-chips {
-  background: linear-gradient(180deg, #46bfff 0%, #46bfff 100%);
+
   display: flex;
   justify-content: center;
   gap: 12px;
