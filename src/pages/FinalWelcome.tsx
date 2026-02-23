@@ -29,7 +29,7 @@ const FinalWelcome: React.FC = () => {
   ];
 
   const handleAllow = () => {
-    history.push('/tabs/home');
+    history.push('/tabs/home-two');
   };
 
   const handleNotNow = () => {

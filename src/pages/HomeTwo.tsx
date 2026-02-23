@@ -100,7 +100,7 @@ const HomeTwo: React.FC = () => {
           </div>
 
           {/* English Language WAEC */}
-          <div className="section-container">
+          {/* <div className="section-container">
             <div className="subject-card">
               <div className="subject-card-inner">
                 <div className="subject-img-wrapper">
@@ -121,8 +121,35 @@ const HomeTwo: React.FC = () => {
                 <span className="completed-label">50% completed</span>
               </div>
             </div>
-          </div>
+          </div> */}
+     <div className="section-container">
+            <div className="subject-card">
+              <div className="subject-card-inner">
+                <div className="subject-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=160&h=120&fit=crop"
+                    alt="English"
+                    className="subject-img"
+                  />
+                </div>
+                <div className="subject-details">
+                  <h4 className="subject-name">English Language WAEC</h4>
+                  <p className="subject-lessons">21 of 50 Lessons</p>
+                </div>
+              </div>
 
+              <div className="subject-progress-wrapper">
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: '50%' }}></div>
+                </div>
+              </div>
+
+              <div className="subject-card-footer">
+                <span className="continue-label">Continue Lesson</span>
+                <span className="completed-label">50% completed</span>
+              </div>
+            </div>
+          </div>
           {/* Quick Links Section */}
           <div className="section-container">
             <h3 className="section-title2" style={{ marginBottom: '14px' }}>Quicks Links</h3>
