@@ -1,8 +1,8 @@
-.category-content {
+/* .category-content {
   --background: #f4f5f9;
 }
 
-/* HEADER */
+
 .cat-header {
   background: #f4f5f9;
   padding: 54px 16px 16px 16px;
@@ -34,7 +34,7 @@
   margin: 0 0 20px 0;
 }
 
-/* FILTER PILLS */
+
 .filter-pills {
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +56,7 @@
   letter-spacing: 0.1px;
 }
 
-/* "All" pill is smaller/rounder like in design */
+
 .pill:first-child {
   padding: 10px 18px;
 }
@@ -66,7 +66,7 @@
   box-shadow: 0 5px 16px rgba(0,0,0,0.22);
 }
 
-/* NOTIFICATION LIST */
+
 .notif-list {
   padding: 12px 16px;
   display: flex;
@@ -74,7 +74,7 @@
   gap: 12px;
 }
 
-/* NOTIFICATION CARD */
+
 .notif-card {
   background: #ffffff;
   border-radius: 18px;
@@ -85,7 +85,6 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
 }
 
-/* Icon box - yellow background with monitor */
 .notif-icon-box {
   width: 48px;
   height: 48px;
@@ -111,7 +110,7 @@
   line-height: 1;
 }
 
-/* Notification Body */
+
 .notif-body {
   flex: 1;
   min-width: 0;
@@ -129,6 +128,144 @@
   color: #777;
   line-height: 1.5;
   margin: 0 0 10px 0;
+}
+
+.notif-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-time {
+  font-size: 12px;
+  color: #4c8dff;
+  font-weight: 500;
+}
+
+.notif-action {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 600;
+  cursor: pointer;
+} */
+
+/* BACKGROUND - white like image 1 */
+.category-content {
+  --background: #ffffff;
+}
+
+/* HEADER */
+.cat-header {
+  background: #ffffff;
+  padding: 54px 16px 16px 16px;
+}
+
+.cat-header-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.back-icon {
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cat-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.cat-subtitle {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 16px 0;
+}
+
+/* FILTER PILLS - all same size, wrapping two rows */
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.pill {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  letter-spacing: 0.1px;
+}
+
+.pill.active {
+  transform: scale(1.04);
+  box-shadow: 0 5px 16px rgba(0,0,0,0.22);
+}
+
+/* NOTIFICATION LIST */
+.notif-list {
+  padding: 4px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+/* NOTIFICATION CARD - white with bottom border separator like image 1 */
+.notif-card {
+  background: #ffffff;
+  padding: 16px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Icon box - yellow square */
+.notif-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #FFD54F;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notif-emoji {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* Notification Body */
+.notif-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.notif-desc {
+  font-size: 12.5px;
+  color: #777;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
 }
 
 .notif-footer {
