@@ -1,4 +1,4 @@
-.custom-tab-bar {
+/* .custom-tab-bar {
   --background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
   height: 70px;
@@ -8,7 +8,7 @@
   border: none;
 }
 
-/* Remove any default backgrounds */
+
 ion-tab-bar.custom-tab-bar {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
 }
@@ -35,7 +35,7 @@ ion-tab-bar.custom-tab-bar {
 
 .center-tab {
   position: relative;
-  /* Remove label to keep it clean like in the design */
+
 }
 
 .center-tab ion-label {
@@ -67,4 +67,69 @@ ion-tab-bar.custom-tab-bar {
 .tab-button.tab-selected .tab-icon {
   transform: scale(1.1);
   transition: transform 0.2s ease;
+} */
+.custom-tab-bar {
+  --background: #ffffff;
+  background: #ffffff !important;
+  height: 75px;
+  padding: 6px 0 10px;
+  border-radius: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid #f0f0f0;
+}
+
+ion-tab-bar.custom-tab-bar {
+  background: #ffffff !important;
+}
+
+.tab-button {
+  --color: #aaaaaa;
+  --color-selected: #d63384;
+  --background: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --ripple-color: transparent;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tab-img-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-bottom: 2px;
+}
+
+.tab-label {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+/* Center tab - raised pink circle, no label */
+.center-tab {
+  position: relative;
+  overflow: visible;
+}
+
+.center-tab ion-label {
+  display: none;
+}
+
+.center-icon-wrapper {
+  width: 62px;
+  height: 62px;
+  background: #ee278a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  box-shadow: 0 4px 16px rgba(214, 51, 132, 0.25);
+}
+
+.center-img-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }

@@ -103,6 +103,7 @@ import InviteParent from './pages/SchDashboard/InviteParent';
 import ParentDash from './pages/SchDashboard/ParentDash';
 import WhiteTab from './pages/WhiteTab';
 import { useLocation } from 'react-router-dom';
+import HomeTwo from './pages/HomeTwo';
 setupIonicReact();
 const TabBarSelector: React.FC = () => {
   const location = useLocation();
@@ -110,7 +111,7 @@ const TabBarSelector: React.FC = () => {
   if (location.pathname === '/tabs/home') {
     return <CustomTabBar />;
   }
-  return <WhiteTab />;
+  return <CustomTabBar />;
 };
 const App: React.FC = () => (
 
@@ -158,6 +159,9 @@ const App: React.FC = () => (
     <IonRouterOutlet>
       <Route exact path="/tabs/home">
         <Home />
+      </Route>
+      <Route exact path="/tabs/home-two">
+        <HomeTwo />
       </Route>
 
       {/* All other routes */}
