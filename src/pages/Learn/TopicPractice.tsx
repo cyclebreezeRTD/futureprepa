@@ -71,9 +71,19 @@ const TopicPractice: React.FC = () => {
           </div>
 
           {/* Start Practice Button */}
-          <IonButton className="topic-start-practice-btn" expand="block">
+          {/* <IonButton className="topic-start-practice-btn" expand="block">
             Start Practice
-          </IonButton>
+          </IonButton> */}
+
+                  <IonButton 
+                        expand="block" 
+                        className="signup-button"
+                        // onClick={handleSignUp}
+                                 style={{color: "white"}}
+                      >
+                    Start Practice
+                      </IonButton>
+          
         </div>
 
         {/* Bottom padding for tab bar */}

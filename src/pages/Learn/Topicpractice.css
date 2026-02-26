@@ -125,11 +125,11 @@
 }
 
 .subject-card {
-  padding: 18px 20px;
+  padding: 28px 30px;
   border-radius: 12px;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -140,14 +140,17 @@
 
 .subject-card.purple-subject {
   background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+  padding: 20px;
 }
 
 .subject-card.orange-subject {
   background: linear-gradient(135deg, #ff9a56 0%, #ff7b4d 100%);
+    padding: 20px;
 }
 
 .subject-card.brown-subject {
   background: linear-gradient(135deg, #8b5a3c 0%, #6d4c41 100%);
+    padding: 20px;
 }
 
 .subject-name {
