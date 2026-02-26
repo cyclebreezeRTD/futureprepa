@@ -1,188 +1,164 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  IonContent,
-  IonHeader,
   IonPage,
-  IonToolbar,
+  IonContent,
   IonIcon,
-  IonButton,
-  IonProgressBar,
 } from '@ionic/react';
-import { 
-  searchOutline, 
-  notifications,
-  arrowBack,
-  download,
-  bookOutline,
-  school,
+import {
+  searchOutline,
+  notificationsOutline,
+  menuOutline,
+  chevronBackOutline,
+  timeOutline,
+  starOutline,
+  peopleOutline,
+  wifiOutline,
+  libraryOutline,
+  barChartOutline,
   chatbubbleEllipsesOutline,
-  checkmarkCircle
 } from 'ionicons/icons';
 import './CourseDetails.css';
 
-const CourseDetails: React.FC = () => { 
+const subjectProgress = [
+  { subject: 'Mathematics', sub: 'Continue lesson', pct: 50, color: 'prog-purple' },
+  { subject: 'Mathematics', sub: 'Continue lesson', pct: 62, color: 'prog-pink' },
+  { subject: 'Mathematics', sub: 'Continue lesson', pct: 50, color: 'prog-blue' },
+];
+
+const CourseDetails: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+
   return (
     <IonPage>
-      <IonHeader className="ion-no-border course-details-header">
-        <IonToolbar className="course-details-toolbar">
-          <div className="course-details-header-content">
-            <IonIcon icon={arrowBack} className="back-icon" />
-            <div className="header-icons">
-              <IonIcon icon={searchOutline} className="header-icon" />
-              <IonIcon icon={notifications} className="header-icon" />
-            </div>
-          </div>
-        </IonToolbar>
-      </IonHeader>
+      <IonContent fullscreen scrollY className="cd-content">
 
-      <IonContent fullscreen className="course-details-content">
-        {/* Course Title Section */}
-        <div className="course-title-section">
-          <h2 className="course-main-title">WAEC</h2>
-          <p className="course-subtitle">West African Examination Council</p>
+        {/* Top nav bar */}
+        <div className="cd-topbar">
+          <IonIcon icon={menuOutline} className="cd-menu-icon" />
+          <div className="cd-topbar-right">
+            <IonIcon icon={searchOutline} className="cd-nav-icon" />
+            <IonIcon icon={notificationsOutline} className="cd-nav-icon" />
+          </div>
         </div>
 
-        {/* Exam Results Card */}
-        <div className="exam-results-card">
-          <div className="results-content">
-            <div className="result-item">
-              <span className="result-label">Exam Readiness</span>
-              <span className="result-value">72%</span>
+        {/* Title row */}
+        <div className="cd-title-row">
+          <IonIcon icon={chevronBackOutline} className="cd-back-icon" />
+          <div>
+            <h1 className="cd-main-title">WAEC</h1>
+            <p className="cd-main-subtitle">West African Examination Council</p>
+          </div>
+        </div>
+
+        {/* Exam Readiness Card */}
+        <div className="cd-readiness-card">
+          <div className="cd-readiness-bar-wrap">
+            <div className="cd-readiness-label-row">
+              <span className="cd-readiness-label">Exam Readiness : 50%</span>
             </div>
+            <div className="cd-readiness-track">
+              <div className="cd-readiness-fill" style={{ width: '50%' }} />
+            </div>
+          </div>
+          <div className="cd-readiness-footer">
+            <span className="cd-continue-link">Continue lesson</span>
+            <span className="cd-readiness-pct">50% completed</span>
           </div>
         </div>
 
         {/* Action Pills */}
-        <div className="action-pills-container">
-          <div className="action-pill purple">Overview</div>
-          <div className="action-pill orange">Practice</div>
-          <div className="action-pill pink">IQ</div>
-          <div className="action-pill blue">Analytics</div>
+        <div className="cd-pills-row">
+          {['overview', 'practice', 'pq', 'analytics'].map((tab) => (
+            <button
+              key={tab}
+              className={`cd-pill ${tab} ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab === 'pq' ? 'PQ' : tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
         </div>
 
         {/* Stats Row */}
-        <div className="stats-row">
-          <div className="stat-item">
-            <IonIcon icon={download} className="stat-icon" />
-            <div className="stat-text">
-              <div className="stat-value">40 Minutes</div>
+        <div className="cd-stats-row">
+          <div className="cd-stat-item">
+            <IonIcon icon={timeOutline} className="cd-stat-icon" />
+            <span className="cd-stat-text">40 Minutes</span>
+          </div>
+          <div className="cd-stat-item">
+            <IonIcon icon={starOutline} className="cd-stat-icon yellow" />
+            <span className="cd-stat-text">5/5 (22)</span>
+          </div>
+          <div className="cd-stat-item">
+            <IonIcon icon={peopleOutline} className="cd-stat-icon" />
+            <span className="cd-stat-text">800 students</span>
+          </div>
+        </div>
+
+        {/* Features */}
+        <div className="cd-section">
+          <h3 className="cd-section-title">Features</h3>
+
+          <div className="cd-feature-item">
+            <div className="cd-feat-icon-wrap pink-border">
+              <IonIcon icon={wifiOutline} className="cd-feat-icon pink" />
+            </div>
+            <div>
+              <p className="cd-feat-title">100% Online</p>
+              <p className="cd-feat-desc">Start instantly and learn to you own schedule</p>
             </div>
           </div>
-          <div className="stat-item">
-            <div className="igs-badge">IGS</div>
-            <div className="stat-text">
-              <div className="stat-value">600 Students</div>
+
+          <div className="cd-feature-item">
+            <div className="cd-feat-icon-wrap yellow-border">
+              <IonIcon icon={libraryOutline} className="cd-feat-icon yellow" />
+            </div>
+            <div>
+              <p className="cd-feat-title">CBT Past Questions</p>
+              <p className="cd-feat-desc">Explore & answer questions from the past exams</p>
+            </div>
+          </div>
+
+          <div className="cd-feature-item">
+            <div className="cd-feat-icon-wrap blue-border">
+              <IonIcon icon={barChartOutline} className="cd-feat-icon blue" />
+            </div>
+            <div>
+              <p className="cd-feat-title">Beginner Level</p>
+              <p className="cd-feat-desc">You will learn from the beginning</p>
+            </div>
+          </div>
+
+          <div className="cd-feature-item">
+            <div className="cd-feat-icon-wrap gray-border">
+              <IonIcon icon={chatbubbleEllipsesOutline} className="cd-feat-icon gray" />
+            </div>
+            <div>
+              <p className="cd-feat-title">Chat with AI</p>
+              <p className="cd-feat-desc">Ask questions and communicate with AI</p>
             </div>
           </div>
         </div>
 
-        {/* Features Section */}
-        <div className="features-section">
-          <h3 className="section-heading">Features</h3>
+        {/* Subject Progress */}
+        <div className="cd-section">
+          <h3 className="cd-section-title">Subject Progress</h3>
 
-          <div className="feature-item">
-            <div className="feature-icon-wrapper pink">
-              <IonIcon icon={checkmarkCircle} className="feature-icon" />
+          {subjectProgress.map((item, i) => (
+            <div key={i} className={`cd-prog-card ${item.color}`}>
+              <div className="cd-prog-top">
+                <span className="cd-prog-name">{item.subject}</span>
+                <span className="cd-prog-pct">{item.pct}% completed</span>
+              </div>
+              <p className="cd-prog-sub">{item.sub}</p>
+              <div className="cd-prog-track">
+                <div className="cd-prog-fill" style={{ width: `${item.pct}%` }} />
+              </div>
             </div>
-            <div className="feature-content">
-              <h4 className="feature-title">100% Offline</h4>
-              <p className="feature-description">
-                Download videos and watch on schedule
-              </p>
-            </div>
-          </div>
-
-          <div className="feature-item">
-            <div className="feature-icon-wrapper yellow">
-              <IonIcon icon={bookOutline} className="feature-icon" />
-            </div>
-            <div className="feature-content">
-              <h4 className="feature-title">CBT Past Questions</h4>
-              <p className="feature-description">
-                Over 10,000 past questions to try out speed
-              </p>
-            </div>
-          </div>
-
-          <div className="feature-item">
-            <div className="feature-icon-wrapper cyan">
-              <IonIcon icon={school} className="feature-icon" />
-            </div>
-            <div className="feature-content">
-              <h4 className="feature-title">Beginner Level</h4>
-              <p className="feature-description">
-                Basic courses and best learning
-              </p>
-            </div>
-          </div>
-
-          <div className="feature-item">
-            <div className="feature-icon-wrapper gray">
-              <IonIcon icon={chatbubbleEllipsesOutline} className="feature-icon" />
-            </div>
-            <div className="feature-content">
-              <h4 className="feature-title">Chat with AI</h4>
-              <p className="feature-description">
-                Ask question and converse with AI
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* Subject Progress Section */}
-        <div className="subject-progress-section">
-          <h3 className="section-heading">Subject Progress</h3>
-
-          <div className="progress-item purple-progress">
-            <div className="progress-header">
-              <span className="progress-subject">MATHEMATICS</span>
-              <span className="progress-percentage">100% completed</span>
-            </div>
-            <div className="progress-bar-container">
-              <div className="progress-bar-fill" style={{ width: '100%' }}></div>
-            </div>
-          </div>
-
-          <div className="progress-item pink-progress">
-            <div className="progress-header">
-              <span className="progress-subject">MATHEMATICS</span>
-              <span className="progress-percentage">100% completed</span>
-            </div>
-            <div className="progress-bar-container">
-              <div className="progress-bar-fill" style={{ width: '100%' }}></div>
-            </div>
-          </div>
-
-          <div className="progress-item blue-progress">
-            <div className="progress-header">
-              <span className="progress-subject">MATHEMATICS</span>
-              <span className="progress-percentage">100% completed</span>
-            </div>
-            <div className="progress-bar-container">
-              <div className="progress-bar-fill" style={{ width: '100%' }}></div>
-            </div>
-          </div>
-
-          <div className="progress-item pink-alt-progress">
-            <div className="progress-header">
-              <span className="progress-subject">MATHEMATICS</span>
-              <span className="progress-percentage">100% completed</span>
-            </div>
-            <div className="progress-bar-container">
-              <div className="progress-bar-fill" style={{ width: '100%' }}></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Start Practice Button */}
-        <div className="action-button-container">
-          <IonButton className="start-practice-btn" expand="block">
-            Start Practice
-          </IonButton>
-        </div>
-
-        {/* Bottom padding for tab bar */}
-        <div style={{ height: '80px' }}></div>
+        <div style={{ height: 80 }} />
       </IonContent>
     </IonPage>
   );

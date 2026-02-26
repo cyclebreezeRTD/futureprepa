@@ -1,330 +1,301 @@
-/* Header Styles */
-.course-details-header {
-  --background: #ffffff !important;
-  background: #ffffff !important;
+/* ===========================
+   COURSE DETAILS PAGE
+   =========================== */
+
+.cd-content {
+  --background: #ffffff;
 }
 
-.course-details-toolbar {
-  --background: #ffffff !important;
-  background: #ffffff !important;
-  padding: 10px 16px;
-  --min-height: 56px;
-}
-
-.course-details-header-content {
+/* ── Top nav bar ── */
+.cd-topbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: calc(env(safe-area-inset-top) + 14px) 16px 8px;
+  background: #fff;
 }
 
-.back-icon {
+.cd-menu-icon {
   font-size: 24px;
-  color: #000000;
-  cursor: pointer;
+  color: #222;
 }
 
-.header-icons {
+.cd-topbar-right {
   display: flex;
   gap: 16px;
-  align-items: center;
 }
 
-.header-icon {
+.cd-nav-icon {
   font-size: 22px;
-  color: #000000;
-  cursor: pointer;
+  color: #222;
 }
 
-/* Content Styles */
-.course-details-content {
-  --background: #f8f9fa;
-  background: #f8f9fa;
+/* ── Title row ── */
+.cd-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 4px 16px 12px;
+  background: #fff;
 }
 
-/* Course Title Section */
-.course-title-section {
-  padding: 16px 16px 12px 16px;
-  background: #ffffff;
+.cd-back-icon {
+  font-size: 20px;
+  color: #444;
+  margin-top: 4px;
+  flex-shrink: 0;
 }
 
-.course-main-title {
+.cd-main-title {
   font-size: 22px;
-  font-weight: 700;
-  color: #000000;
-  margin: 0 0 4px 0;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 2px;
+  line-height: 1.1;
 }
 
-.course-subtitle {
-  font-size: 13px;
-  color: #666666;
+.cd-main-subtitle {
+  font-size: 12px;
+  color: #888;
   margin: 0;
 }
 
-/* Exam Results Card */
-.exam-results-card {
-  margin: 16px;
-  padding: 20px;
+/* ── Exam Readiness Card ── */
+.cd-readiness-card {
+  margin: 0 16px 16px;
+  padding: 14px 16px 12px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #b57bee 0%, #6c63ff 50%, #4facfe 100%);
+  box-shadow: 0 4px 18px rgba(108, 99, 255, 0.28);
 }
 
-.results-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cd-readiness-label-row {
+  margin-bottom: 8px;
 }
 
-.result-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.result-label {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.result-value {
-  font-size: 28px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-/* Action Pills */
-.action-pills-container {
-  display: flex;
-  gap: 8px;
-  padding: 0 16px 16px 16px;
-  overflow-x: auto;
-}
-
-.action-pill {
-  padding: 8px 20px;
-  border-radius: 20px;
+.cd-readiness-label {
   font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-  cursor: pointer;
-  color: #ffffff;
-}
-
-.action-pill.purple {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.action-pill.orange {
-  background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
-}
-
-.action-pill.pink {
-  background: linear-gradient(135deg, #ff6b9d 0%, #f5576c 100%);
-}
-
-.action-pill.blue {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-/* Stats Row */
-.stats-row {
-  display: flex;
-  gap: 16px;
-  padding: 0 16px 20px 16px;
-  align-items: center;
-}
-
-.stat-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.stat-icon {
-  font-size: 20px;
-  color: #666666;
-}
-
-.igs-badge {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.stat-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-value {
-  font-size: 13px;
-  font-weight: 500;
-  color: #333333;
-}
-
-/* Features Section */
-.features-section {
-  padding: 0 16px 20px 16px;
-}
-
-.section-heading {
-  font-size: 16px;
   font-weight: 600;
-  color: #000000;
-  margin: 0 0 16px 0;
+  color: #fff;
+  letter-spacing: 0.2px;
 }
 
-.feature-item {
+.cd-readiness-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cd-readiness-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.cd-readiness-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.cd-continue-link {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cd-readiness-pct {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Action Pills ── */
+.cd-pills-row {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cd-pills-row::-webkit-scrollbar {
+  display: none;
+}
+
+.cd-pill {
+  border: none;
+  outline: none;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+
+.cd-pill.active {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+}
+
+.cd-pill.overview  { background: linear-gradient(135deg, #8b5cf6, #6c63ff); }
+.cd-pill.practice  { background: linear-gradient(135deg, #f97316, #ef4444); }
+.cd-pill.pq        { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+.cd-pill.analytics { background: linear-gradient(135deg, #06b6d4, #3b82f6); }
+
+/* ── Stats Row ── */
+.cd-stats-row {
+  display: flex;
+  gap: 20px;
+  padding: 0 16px 18px;
+  align-items: center;
+}
+
+.cd-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cd-stat-icon {
+  font-size: 18px;
+  color: #888;
+}
+
+.cd-stat-icon.yellow {
+  color: #f59e0b;
+}
+
+.cd-stat-text {
+  font-size: 12px;
+  color: #444;
+  font-weight: 500;
+}
+
+/* ── Section ── */
+.cd-section {
+  padding: 0 16px 8px;
+}
+
+.cd-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 14px;
+}
+
+/* ── Feature Items ── */
+.cd-feature-item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 16px;
 }
 
-.feature-icon-wrapper {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+.cd-feat-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: #fff;
 }
 
-.feature-icon-wrapper.pink {
-  background: linear-gradient(135deg, #ff6b9d 0%, #f5576c 100%);
-}
+.cd-feat-icon-wrap.pink-border   { border-color: #ec4899; }
+.cd-feat-icon-wrap.yellow-border { border-color: #f59e0b; }
+.cd-feat-icon-wrap.blue-border   { border-color: #3b82f6; }
+.cd-feat-icon-wrap.gray-border   { border-color: #ccc; }
 
-.feature-icon-wrapper.yellow {
-  background: linear-gradient(135deg, #ffd93d 0%, #ffb03b 100%);
-}
-
-.feature-icon-wrapper.cyan {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.feature-icon-wrapper.gray {
-  background: #e0e0e0;
-}
-
-.feature-icon {
+.cd-feat-icon {
   font-size: 20px;
-  color: #ffffff;
 }
 
-.feature-icon-wrapper.gray .feature-icon {
-  color: #999999;
-}
+.cd-feat-icon.pink   { color: #ec4899; }
+.cd-feat-icon.yellow { color: #f59e0b; }
+.cd-feat-icon.blue   { color: #3b82f6; }
+.cd-feat-icon.gray   { color: #aaa; }
 
-.feature-content {
-  flex: 1;
-}
-
-.feature-title {
-  font-size: 15px;
+.cd-feat-title {
+  font-size: 14px;
   font-weight: 600;
-  color: #000000;
-  margin: 0 0 4px 0;
+  color: #111;
+  margin: 0 0 3px;
 }
 
-.feature-description {
-  font-size: 13px;
-  color: #666666;
+.cd-feat-desc {
+  font-size: 12px;
+  color: #888;
   margin: 0;
   line-height: 1.4;
 }
 
-/* Subject Progress Section */
-.subject-progress-section {
-  padding: 0 16px 20px 16px;
+/* ── Subject Progress Cards ── */
+.cd-prog-card {
+  border-radius: 14px;
+  padding: 14px 16px 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
 }
 
-.progress-item {
-  padding: 16px;
-  border-radius: 12px;
-  margin-bottom: 10px;
+.cd-prog-card.prog-purple {
+  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
 }
 
-.progress-item.purple-progress {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.cd-prog-card.prog-pink {
+  background: linear-gradient(135deg, #fb7185 0%, #e11d48 100%);
 }
 
-.progress-item.pink-progress {
-  background: linear-gradient(135deg, #ff6b9d 0%, #f5576c 100%);
+.cd-prog-card.prog-blue {
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
 }
 
-.progress-item.blue-progress {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.progress-item.pink-alt-progress {
-  background: linear-gradient(135deg, #f093fb 0%, #d946ef 100%);
-}
-
-.progress-header {
+.cd-prog-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
-.progress-subject {
+.cd-prog-name {
   font-size: 13px;
-  font-weight: 600;
-  color: #ffffff;
+  font-weight: 700;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.progress-percentage {
-  font-size: 12px;
+.cd-prog-pct {
+  font-size: 11px;
+  color: rgba(255,255,255,0.85);
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
 }
 
-.progress-bar-container {
-  height: 6px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 3px;
+.cd-prog-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 8px;
+}
+
+.cd-prog-track {
+  height: 5px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.progress-bar-fill {
+.cd-prog-fill {
   height: 100%;
-  background: #ffffff;
-  border-radius: 3px;
-  transition: width 0.3s ease;
-}
-
-/* Action Button */
-.action-button-container {
-  padding: 0 16px 20px 16px;
-}
-
-.start-practice-btn {
-  --background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --border-radius: 12px;
-  height: 52px;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: none;
-  margin: 0;
-}
-
-/* Remove scrollbar for pills */
-.action-pills-container::-webkit-scrollbar {
-  display: none;
-}
-
-.action-pills-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  background: #fff;
+  border-radius: 10px;
 }
