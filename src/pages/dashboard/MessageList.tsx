@@ -8,40 +8,38 @@ import {
   IonButtons,
   IonBackButton,
   IonChip,
+  IonIcon,
   IonLabel,
+  IonButton,
 } from '@ionic/react';
 import './MessageList.css';
-
-const MessageList: React.FC = () => {
+import './Category.css';
+import { chevronBackOutline } from 'ionicons/icons';
+const MesaageList: React.FC = () => {
   return (
-    <IonPage>
-      <IonHeader className="ion-no-border msg-header">
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonBackButton defaultHref="/" text="" />
-          </IonButtons>
+<IonPage>
+      <IonContent fullscreen scrollY={true} className="category-content">
+   <div className="cat-header">
+          <div className="cat-header-top">
+            <IonIcon icon={chevronBackOutline} className="back-icon" />
+            <h1 className="cat-title">Message</h1>
+          </div>
+          <p className="cat-subtitle">Stay updated with your learning journey</p>
 
-          <IonTitle className="msg-title">Message</IonTitle>
-        </IonToolbar>
 
-        <div className="msg-sub">
-          Stay updated with your learning journey
-        </div>
+    <div className="categories-chips">
+      <IonChip className="pill all">
+        <IonLabel>All</IonLabel>
+      </IonChip>
+      <IonChip className="pill unread">
+        <IonLabel>Unread</IonLabel>
+      </IonChip>
+      <IonChip className="pill messages">
+        <IonLabel>Messages</IonLabel>
+      </IonChip>
+    </div>
+</div>
 
-        <div className="msg-chips">
-          <IonChip className="msg-pill notify">
-            <IonLabel>Notification</IonLabel>
-          </IonChip>
-
-          <IonChip className="msg-pill chat">
-            <IonLabel>Chat</IonLabel>
-          </IonChip>
-
-          <IonChip className="msg-pill unread">
-            <IonLabel>Unread</IonLabel>
-          </IonChip>
-        </div>
-      </IonHeader>
 
       <IonContent>
         <div className="message-card">
@@ -49,7 +47,7 @@ const MessageList: React.FC = () => {
             <div className="msg-icon">🔔</div>
 
             <div>
-              <div className="msg-text">Ayoola Sent you a message</div>
+              <div className="msg-text" style={{color: "black"}}>Ayoola Sent you a message</div>
               <div className="msg-time">2 Hours Ago</div>
             </div>
           </div>
@@ -57,8 +55,10 @@ const MessageList: React.FC = () => {
           <div className="msg-view">View Message</div>
         </div>
       </IonContent>
-    </IonPage>
+
+  </IonContent>
+</IonPage>
   );
 };
 
-export default MessageList;
+export default MesaageList;
