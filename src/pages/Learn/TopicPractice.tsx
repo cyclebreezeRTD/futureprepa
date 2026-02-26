@@ -56,17 +56,17 @@ const TopicPractice: React.FC = () => {
           <div className="subject-cards-list">
             <div className="subject-card purple-subject">
               <span className="subject-name">Mathematics</span>
-              <IonIcon icon={chevronForward} className="subject-arrow" />
+              {/* <IonIcon icon={chevronForward} className="subject-arrow" /> */}
             </div>
 
             <div className="subject-card orange-subject">
               <span className="subject-name">English</span>
-              <IonIcon icon={chevronForward} className="subject-arrow" />
+              {/* <IonIcon icon={chevronForward} className="subject-arrow" /> */}
             </div>
 
             <div className="subject-card brown-subject">
               <span className="subject-name">Biology</span>
-              <IonIcon icon={chevronForward} className="subject-arrow" />
+              {/* <IonIcon icon={chevronForward} className="subject-arrow" /> */}
             </div>
           </div>
 
