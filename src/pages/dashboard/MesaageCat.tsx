@@ -17,8 +17,9 @@ import './Category.css';
 import { chevronBackOutline } from 'ionicons/icons';
 const MesaageCat: React.FC = () => {
   return (
-<IonPage className="message-cat-page">
-  <IonHeader className="ion-no-border categories-header">
+<IonPage>
+      <IonContent fullscreen scrollY={true} className="category-content">
+   <div className="cat-header">
           <div className="cat-header-top">
             <IonIcon icon={chevronBackOutline} className="back-icon" />
             <h1 className="cat-title">Categories</h1>
@@ -37,9 +38,9 @@ const MesaageCat: React.FC = () => {
         <IonLabel>Messages</IonLabel>
       </IonChip>
     </div>
-  </IonHeader>
+</div>
 
-  <IonContent fullscreen className="message-cat-page">
+
     <div className="dm-empty">
       <h2>Welcome to your direct message!</h2>
       <p>
